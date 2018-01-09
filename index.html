@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Tutorials</title>
+
+  <link rel="stylesheet" href="css/style.css" media="all" type="text/css">
+
+<script src="js/test.js" type="text/javascript"></script>
+
+<script>
+ function testFunction(){
+
+   document.getElementById('demo6').innerHTML = 'Paragraph changed';
+
+ }
+
+</script>
+
+
+</head>
+<body>
+
+
+<!-- coding start here -->
+
+  <h1>JavaScript Tutorials</h1>
+  <hr>
+
+  <br>
+  <p id="demo"></p>
+
+    <button type="button" name="button" onclick="getElementById('demo').innerHTML=Date()">Click to Display Date and Time</button>
+
+    <br><br>
+
+    <p id="demo2">This will change</p>
+
+    <button type="button" name="button" onclick="getElementById('demo2').innerHTML = 'Hello, JavaScript!'">Click me</button>
+
+
+<br><br>
+
+<h3><span style="color:#cc3341;">JavaScript can change HTML attributes.</span></h3>
+
+<button onclick="document.getElementById('myImage').src='assets/pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="assets/pic_bulboff.gif" style="width:100px;">
+
+<button onclick="document.getElementById('myImage').src='assets/pic_bulboff.gif'">Turn off the light</button>
+
+
+<br><br>
+
+<p id="demo3" style="color:#cc3341;">JavaScript can change the style of and HTML element</p>
+
+<button type="button" onclick="document.getElementById('demo3').style.fontSize='35px'">Click to Big</button>
+
+<button type="button" onclick="document.getElementById('demo3').style.fontSize='16px'">Click to normal</button>
+
+<br><br>
+
+<p id="colorchange" style="font-weight: bold; font-size:24px">This Text Color will change</p>
+<button type="button"  onclick="document.getElementById('colorchange').style.color='#ffce00'">Yellow</button>
+<button type="button" onclick="document.getElementById('colorchange').style.color='#19ad43'">Green</button>
+<button type="button" onclick="document.getElementById('colorchange').style.color='#01c5d5'">Cyan</button>
+<button type="button" onclick="document.getElementById('colorchange').style.color='#6a2bb3'">Violet</button>
+<button type="button" onclick="document.getElementById('colorchange').style.color='#000000'">Black</button>
+
+
+
+<br><br>
+
+<p id="hide" style="font-size:22px; font-weight:bold; display:block;">This Text will hide/show</p>
+
+<button type="button" name="button" onclick="myHide()">Hide </button>
+
+<button type="button" name="button" onclick="myShow()">Show</button>
+
+
+<br><br>
+
+<!-- Using with <Script> </Script> Tag-->
+
+<p id="demo5" style="font-size:24px;"></p>
+<script>
+
+document.getElementById('demo5').innerHTML='Welcome to JavaScript';
+
+</script>
+
+
+
+<br><br>
+
+<!-- function called from head section-->
+<h3>JavaScript in head or body</h3>
+
+<p id="demo6" style="font-size:26px; color:#19ad43;">This Paragraph</p>
+<button type="button" name="button" onclick="testFunction()">Try it</button>
+
+
+
+<br><br>
+<!-- JavaScript OutPut -->
+
+<h2>JavaScript Display Possibilities</h2>
+<br>
+<h3><i>JavaScript can "display" data in different ways:</i></h3>
+<br>
+    Writing into an HTML element, using <strong>innerHTML.</strong><br>
+    Writing into the HTML output using <strong>document.write().</strong><br>
+    Writing into an alert box, using <strong>window.alert().</strong><br>
+    Writing into the browser console, using <strong>console.log().</strong>
+
+
+<br>
+<br>
+
+<h3>Using innerHTML</h3>
+<h4><u>Example</u></h4>
+<p id="id1"></p>
+<script type="text/javascript">
+document.getElementById('id1').innerHTML = 10 + 2;
+
+</script>
+
+<br><br>
+
+<h3>Using document.write()</h3>
+<h4><u>Example</u></h4>
+
+<script>
+document.write(8+ 9);
+
+</script>
+
+<br><br>
+<h4><u>Example 2</u></h4>
+<p>Using document.write() after an HTML document is fully loaded, will delete all existing HTML:</p>
+
+<button type="button" name="button" onclick="document.write(2+4)">Try this</button>
+
+<br><br>
+
+<h3>Using window.alert()</h3>
+<h4><u>Example</u></h4>
+
+<!-- <script type="text/javascript">
+
+window.alert('Welcome to JavaScript Practice');
+</script> -->
+
+<br>
+<h4><u>Example 2</u></h4>
+<!-- <script type="text/javascript">
+
+window.alert(10+7);
+
+</script> -->
+
+
+
+
+
+<br><br>
+
+<h3>Using window.alert()</h3>
+<h4><u>Example</u></h4>
+
+<script type="text/javascript">
+
+console.log(8+7);
+
+</script>
+
+
+<br><br>
+
+<h2>JavaScript Syntax</h2>
+
+<h3>Example Adding two numbers x, y</h3>
+
+
+<p id="add"></p>
+
+<script type="text/javascript">
+var x, y, z;
+x = 12; y = 209; z = x + y;
+
+document.getElementById('add').innerHTML  =
+
+"Total is :"  + z;
+
+</script>
+
+<br><br>
+
+<h2 style="color:#ffce00;">Case Sensitive</h2>
+
+<p id="name"></p>
+
+<script type="text/javascript">
+var firstname, Firstname;
+firstname = "ganesh";
+Firstname = "honey";
+
+document.getElementById('name').innerHTML = Firstname;
+
+</script>
+
+
+<br><br>
+
+<p id="name2"></p>
+<p id="name3"></p>
+
+<button type="button" name="button" onclick="myName()">Click me!</button>
+
+
+<br><br>
+
+<p>Multiline Comments /*  */</p>
+<script type="text/javascript">
+/*
+The code below will change
+the heading with id = "myH"
+and the paragraph with id = "myp"
+in my web page:
+*/
+
+</script>
+
+
+
+
+
+</body>
+</html>

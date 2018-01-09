@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Variables</title>
+
+  <link rel="stylesheet" href="css/style.css" media="all" type="text/css">
+
+</head>
+<body>
+
+  <h2>JavaScript Variables</h2>
+
+<p>JavaScript variables are containers for storing data< values.</p>
+
+<p>In this example, x, y, and z, are variables:</p>
+
+<h4>Example</h4>
+
+<h3>Example Adding two numbers x, y</h3>
+
+
+<p id="add1"></p>
+
+<script type="text/javascript">
+var x, y, z;
+x = 12; y = 29; z = x + y;
+
+document.getElementById('add1').innerHTML  =
+
+"Total is :"  + z;
+
+</script>
+
+
+<br><br>
+
+<h2>JavaScript Identifiers</h2>
+
+<p>All JavaScript variables must be identified with unique names.</p>
+
+<p>These unique names are called identifiers.</p>
+
+<p>Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).</p>
+
+<p>The general rules for constructing names for variables (unique identifiers) are:</p>
+
+<ul style="color:#6a2bb3;">
+  <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+  <li>Names must begin with a letter</li>
+  <li>Names can also begin with $ and _ (but we will not use it in this tutorial)</li>
+  <li>Names are case sensitive (y and Y are different variables)</li>
+  <li>Reserved words (like JavaScript keywords) cannot be used as names</li>
+</ul>
+
+<br><br>
+
+<h2 style="color:#f64746;">JavaScript Data Types</h2>
+<div class="data">
+<p>JavaScript variables can hold numbers like 100 and text values like "John Doe".</p>
+
+<p>In programming, text values are called text strings.</p>
+
+<p>JavaScript can handle many types of data, but for now, just think of numbers and strings.</p>
+
+<p>Strings are written inside double or single quotes. Numbers are written without quotes.</p>
+
+<p>If you put a number in quotes, it will be treated as a text string.</p>
+</div>
+
+<br>
+
+<h4 class="example">Example</h4>
+
+<br>
+
+<p>Variable Type: </p>
+<p id="var"></p>
+
+<script type="text/javascript">
+
+var pi  = 3.14; //Numbers
+var person = "Ganesh"; //strings
+var name = 'honey'; //strings
+
+//document.getElementById('var').innerHTML = pi;
+//document.getElementById('var').innerHTML = person;
+document.getElementById('var').innerHTML = name;
+
+
+</script>
+
+<br><br>
+
+<p>We can declare many variables in one statement.</p>
+
+<p>Start the statement with var and separate the variables by comma:</p>
+
+<h4 class="example">
+  Example
+</h4>
+
+<p id="varone"></p>
+
+<script type="text/javascript">
+
+
+
+// can declare in single line as below
+
+var name = "Ganesh", secondName = "Vadla", mobile = 9848999659, address = "Hyderabad"; //Single Line
+
+//OR
+
+
+// can declare in multiple lines as below
+
+/*
+var name = "Ganesh", //string
+secondName = "Vadla", //string
+mobile = 9848999659, //numbers
+address = "Hyderabad"; //string
+
+*/
+
+
+document.getElementById('varone').innerHTML = " Your Details : " + " " + name + " " +  secondName + " " + mobile + " " + address;
+
+</script>
+
+<br><br>
+<h3>value = undefined</h3>
+
+<p>In computer programs, variables are often declared without a value. The value can be something that has to be calculated, or something that will be provided later, like user input.</p>
+
+<p>A variable declared without a value will have the value undefined.</p>
+
+<h4 class="example">Example</h4>
+
+<p>output like this :</p>
+<p id="und"></p>
+<script>
+var carName;
+
+// re-declaring variable value
+//carName = "BMW";
+
+document.getElementById('und').innerHTML = carName;
+
+</script>
+
+<br><br>
+
+<h3>JavaScript Arithmetic</h3>
+
+<p>As with algebra, you can do arithmetic with JavaScript variables, using operators like = and +:</p>
+
+<h4 class="example">Example</h4>
+
+
+Total:
+<p id="adding"></p>
+<p id="string1"></p>
+
+<script>
+var x = 2 + 5 + 6;
+
+//can also add strings, but strings will be concatenated:
+
+var y = "Apple" + " " + "iMac" + " " + "Model" + " " + "2017";
+
+document.getElementById('adding').innerHTML = x;
+document.getElementById('string1').innerHTML = y;
+
+</script>
+
+<br><br>
+
+<p>The result of adding "5" + 2 + 3:</p>
+
+<p id="demo7"></p>
+
+<script>
+var x = "5" + 2 + 3;
+document.getElementById("demo7").innerHTML = x;
+</script>
+
+<br><br>
+<br><br>
+
+<p>The result of adding "5" + 2 + 3:</p>
+
+<p id="demo8"></p>
+
+<script>
+var x = "5" + 2 + 3;
+document.getElementById("demo8").innerHTML = x;
+</script>
+
+
+<br><br>
+<h3>JavaScript Assignment Operators</h3>
+<p>Assignment operators assign values to JavaScript variables.</p>
+
+<h4>Operator	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Example	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;Same As</h4>
+=	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; x = y	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;x = y <br>
++=	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; x += y	x = x + y<br>
+-=	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; x -= y	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;x = x - y<br>
+*=	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; x *= y	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; x = x * y<br>
+/=	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;x /= y	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;x = x / y<br>
+%=	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;x %= y	&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; x = x % y
+
+
+<br><br><br>
+
+<h3>The += Operator</h3>
+<h4 class="example">Example</h4>
+<p id="plus"></p>
+
+<script>
+var x = 10;
+x += 7;
+
+document.getElementById('plus').innerHTML = x;
+
+</script>
+
+
+<br><br><br>
+
+<h3>JavaScript Comparison Operators</h3>
+<div style="color:#6a2bb3;">
+<strong><u>Operator</u></strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><u>Description</u></strong> </div><br>
+==	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;equal to <br>
+===	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;equal value and equal type <br>
+!=	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not equal <br>
+!==	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not equal value or not equal type <br>
+>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;greater than <br>
+<	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;less than <br>
+>=	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;greater than or equal to <br>
+<=	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;less than or equal to <br>
+?	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ternary operator
+
+<br><br>
+
+<h3>JavaScript Logical Operators</h3>
+&&	- logical and <br>
+||	- logical or <br>
+!	- logical not
+
+<br>
+
+<br>
+
+<h3>Arithmetic Operations</h3>
+<h4>A typical arithmetic operation operates on two numbers.</h4>
+
+<h4 class="example">Example</h4>
+
+<p id="division"></p>
+
+<script type="text/javascript">
+
+var x = 10;
+var y = 27;
+var z = x / y;
+
+document.getElementById('division').innerHTML = z;
+
+</script>
+
+<br><br>
+
+<h4>Modulus</h3>
+
+  <h4 class="example">Example</h4>
+<p id="mod"></p>
+  <script type="text/javascript">
+var x = 10;
+var y = 20;
+var z = x%y;
+
+document.getElementById('mod').innerHTML = z;
+
+
+  </script>
+
+  <br><br>
+
+  <h4>Incremental</h4>
+<h4 class="example">Example</h4>
+
+<p id="incre"></p>
+  <script type="text/javascript">
+
+
+var x = 20;
+x += 10;
+
+
+document.getElementById('incre').innerHTML = x;
+  </script>
+
+
+  <br><br><br>
+
+
+
+
+</body>
+<script src="js/test.js" type="text/javascript"></script>
+</html>

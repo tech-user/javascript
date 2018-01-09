@@ -1,0 +1,36 @@
+body{
+  background-color: #c1c1c1;
+  padding: 50px;
+  width: 1000px;
+  border: thin solid #ffce00;
+
+}
+
+h1{
+  color:#6a2bb3;
+  font-family: sans-serif;
+  font-size: 36px;
+}
+
+h2{
+
+  color:#c4560a;
+  font-family: inherit;
+}
+
+hr{
+  color: #ffce00;
+}
+
+.data{
+ color:#007bb9;
+
+}
+
+
+.example{
+  font-family:sans-serif;
+  font-size: 14px;
+  color:#8f0091;
+  text-decoration: underline;
+}
