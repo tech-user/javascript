@@ -13,7 +13,7 @@
 
   <h2>JavaScript Variables</h2>
 
-<p>JavaScript variables are containers for storing data< values.</p>
+<p>JavaScript variables are containers for storing data values.</p>
 
 <p>In this example, x, y, and z, are variables:</p>
 
@@ -86,8 +86,8 @@ var person = "Ganesh"; //strings
 var name = 'honey'; //strings
 
 //document.getElementById('var').innerHTML = pi;
-//document.getElementById('var').innerHTML = person;
-document.getElementById('var').innerHTML = name;
+document.getElementById('var').innerHTML = person;
+//document.getElementById('var').innerHTML = name;
 
 
 </script>
@@ -265,7 +265,8 @@ document.getElementById('plus').innerHTML = x;
 
 var x = 10;
 var y = 27;
-var z = x / y;
+var o = 34;
+var z = (x/y)*o + 98;
 
 document.getElementById('division').innerHTML = z;
 
@@ -278,7 +279,7 @@ document.getElementById('division').innerHTML = z;
   <h4 class="example">Example</h4>
 <p id="mod"></p>
   <script type="text/javascript">
-var x = 10;
+var x = 7;
 var y = 20;
 var z = x%y;
 
@@ -297,8 +298,7 @@ document.getElementById('mod').innerHTML = z;
 
 
 var x = 20;
-x += 10;
-y = x + 9;
+x++;
 
 
 document.getElementById('incre').innerHTML = x;
@@ -306,6 +306,17 @@ document.getElementById('incre').innerHTML = x;
 
 
   <br><br><br>
+
+<h4>Decremental</h4>
+<h4 class="example">Example</h4>
+<p id="decre"></p>
+<script type="text/javascript">
+var x = 30;
+x -= 5;
+
+document.getElementById('decre').innerHTML = x;
+
+</script>
 
 </body>
 <script src="js/test.js" type="text/javascript"></script>
