@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Functions</title>
+  <link rel="stylesheet" href="css/style.css" media="all" type="text/css">
+</head>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>A JavaScript function is a block of code designed to perform a particular task.</p>
+
+<p>A JavaScript function is executed when "something" invokes it (calls it).</p>
+
+<p class="example">This example calls a function which performs a calculation, and returns the result:</p>
+
+
+<p id="f1demo"></p>
+
+<script type="text/javascript">
+  function myFunction (a1, a2){
+    return a1 + a2;
+  }
+document.getElementById('f1demo').innerHTML = myFunction (10, 3);
+</script>
+
+<br><br>
+
+<h3>JavaScript Function Syntax</h3>
+<strong>function</strong> <i>name (parameter1, parameter2, parameter3)</i> { <br><br>
+    code to be executed<br><br>
+}
+
+<br><br>
+
+<h4 class="example">Example</h4>
+
+<p>This example calls a function which performs a calculation and returns the result:</p>
+
+<p id="f2demo"></p>
+
+<script type="text/javascript">
+
+var x = myFunction(9, 3);
+document.getElementById('f2demo').innerHTML = x;
+
+function myFunction(a, b){
+return a * b;
+};
+
+
+</script>
+
+</body>
+</html>

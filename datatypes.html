@@ -57,10 +57,11 @@ document.getElementById('demo10').innerHTML = y;
 <script>
 var carName1 = "Volvo XC60"; // Using double quotes
 var carName2 = 'Volvo XC60'; // Using single quotes
+var carModel = 'Vento'; //using single quotes
 
 document.getElementById("demo11").innerHTML =
 carName1 + "<br>" +
-carName2;
+carName2 + "<br>" + carModel;
 </script>
 <br>
 
@@ -91,9 +92,10 @@ answer3;
 var x1 = 34.00; // Written with decimals
 var x2 = 34; // Written without decimals
 var x3 = 3.14;
+var x4 = 0.08;
 
 document.getElementById("demo13").innerHTML =
-x1 + "<br>" + x2 + "<br>" + x3;
+x1 + "<br>" + x2 + "<br>" + x3 + "<br>" + x4;
 </script>
 
 
@@ -123,8 +125,9 @@ y + "<br>" + z;
 var x = 10;
 var y = 5;
 var z = 5;
+var total = y + z;
 
-document.getElementById('demo15').innerHTML = (x == y) + "<br>" + (y == z);
+document.getElementById('demo15').innerHTML = (x == y) + "<br>" + (y == z) + "<br>" + (x == total);
 
 </script>
 
@@ -142,13 +145,7 @@ var names = ['ganesh','honey','amaravathi'];
 
 //document.getElementById('demo16').innerHTML = names;
 //OR
-document.getElementById('demo16').innerHTML =
-names [0]
-+ " " +
-names [1]
-+ " " +
-names [2];
-
+document.getElementById('demo16').innerHTML = names [0]+ " " + names [1] + " " + names [2];
 
 </script>
 
@@ -176,7 +173,29 @@ var person = {
 
 };
 
+
 document.getElementById('demo17').innerHTML = "My Name is " + person.FirstName + " " + person.SecondName + " And Age is " + person.Age + ", My Address is " + person.Address + " And My Contact Number is " + person.MobileNumber;
+
+
+
+</script>
+<br><br>
+
+<h4 class="example">Example:2</h4>
+<p id="objdemo"></p>
+
+<script type="text/javascript">
+
+var asset = {
+  Name : "monitor",
+  Brand : "HP",
+  Size : "27 inch",
+  Model : "LED"
+
+};
+
+document.getElementById('objdemo').innerHTML = "Asset Name : " + asset.Name + "Brand : " + asset.Brand + "size :" + asset.size + "Model :" + asset.Model;
+
 
 </script>
 
@@ -203,7 +222,7 @@ typeof exp; //undefined
 <br><br><br>
 
 <h2>Null</h2>
-<h4>Objects can be emptied by setting the value to <b>null</b>.</h4>
+<h4>Objects can be emptied by setting the value to <i>null</i>.</h4>
 
 <p id="demo19"></p>
 
@@ -217,7 +236,7 @@ document.getElementById("demo19").innerHTML = typeof person;
 <br><br>
 
 <h2>object</h2>
-<p>Objects can be emptied by setting the value to <b>undefined</b>.</p>
+<p>Objects can be emptied by setting the value to <b><i>undefined</i></b>.</p>
 
 <p id="demo20"></p>
 
@@ -239,6 +258,23 @@ typeof undefined + "<br>" +
 typeof null + "<br><br>" +
 (null === undefined) + "<br>" +
 (null == undefined);
+</script>
+
+
+<br><br><br><br>
+
+<h2>Complex Data</h2>
+<p>The <i>typeof</i> operator can return one of two complex types:</p>
+
+<li>function</li>
+<li>object</li>
+<h4 class="example">Example:</h4>
+<p id="complex"></p>
+
+<script type="text/javascript">
+document.getElementById('complex').innerHTML =
+typeof {name:'ganesh',age:25} + "<br>" +typeof [1,2,3,4] + "<br>" + typeof null + "<br>" + typeof function myFunc(){} + "<br>" + typeof false + "<br>" + typeof 10 + "<br>" + typeof 2.3;
+
 </script>
 
 </body>
