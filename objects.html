@@ -12,6 +12,88 @@
 
 <h1>JavaScript Objects</h1>
 
+<p>Creating a JavaScript Variable</p>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+var car = "Hundai";
+
+document.getElementById('demo').innerHTML = "Car Compnay : " + car;
+
+</script>
+
+<br>
+<p style="color:red;">Objects are variables too. But objects can contain many values. </p>
+
+
+<h4 class="example">Example</h4>
+
+<p id="demo2"></p>
+
+<script type="text/javascript">
+
+var car = {
+type:"Luxary",
+model:"BMWE200",
+color:"Royal Blue"
+};
+
+document.getElementById('demo2').innerHTML =
+"Car Type : " + car.type + "<br />" +
+"Car Model : " + car.model + "<br />" +
+"Car Color : " + car.color;
+
+</script>
+
+<br>
+
+
+<h3>Object Properties</h3>
+<li style="color:blue;">The name:values pairs (in JavaScript objects) are called properties.</li>
+
+
+<p id="demo3"></p>
+
+<script type="text/javascript">
+var person = {name : "Ganesh",surname: "Vadla", Age : "32", Address : "Hyderabad"};
+
+document.getElementById('demo3').innerHTML =
+"Firs Name : " + person.name + "<br />" +
+"SurName : " + person.surname + "<br />" +
+"Age : " + person.Age + "<br />" +
+"Address : " + person.Address;
+
+</script>
+
+<br>
+
+<h3>Object Methods</h3>
+<li style="color:red;">Methods are actions that can be performed on objects.</li>
+<li style="color:red;">Methods are stored in properties as function definitions.</li>
+
+<br>
+<h4>Accessing Object Methods</h4>
+<li>You access an object method with the following syntax: <i>objectName.methodName()</i>
+</li>
+
+<p id="demo4"></p>
+
+<script type="text/javascript">
+
+var person = {
+  firstName : "John",
+  secondName : "Doe",
+  id : 8273,
+  fullName : function(){
+    return this.firstName + " " + this.secondName;
+  }
+};
+
+document.getElementById('demo4').innerHTML = " Full Name :" + person.fullName();
+
+</script>
 
 </body>
 </html>
