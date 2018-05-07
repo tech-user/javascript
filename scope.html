@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Scope</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<h1>JavaScript Scope</h1>
+<li>Scope determines the accessibility (visibility) of variables.</li>
+
+<h2>JavaScript Function Scope</h2>
+<h4 class="example">In JavaScript there are two types of scope:</h4>
+
+<li>Local scope</li>
+<li>Global scope</li>
+<p>JavaScript has function scope: Each function creates a new scope.</p>
+<p>Scope determines the accessibility (visibility) of these variables.</p>
+<p>Variables defined inside a function are not accessible (visible) from outside the function.</p>
+
+<h2>Local JavaScript Variables</h2>
+<li>Variables declared within a JavaScript function, become LOCAL to the function.</li>
+<li>Local variables have local scope: They can only be accessed within the function.</li>
+
+<p>The local variable carName cannot be accessed from code outside the function:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo"></p>
+
+<script>
+myFunction();
+document.getElementById("demo").innerHTML =
+"The type of carName is " + typeof carName;
+
+function myFunction() {
+    var carName = "Volvo";
+}
+</script>
+
+<br>
+<li style="color:darkblue;">Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.</li>
+<li style="color:darkblue;">Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.</li>
+<li style="color:darkblue;">Local variables are created when a function starts, and deleted when the function is completed.</li>
+
+<br><br>
+<h2>Global JavaScript Variables</h2>
+
+<li>A variable declared outside a function, becomes GLOBAL.</li>
+<li>A global variable has global scope: All scripts and functions on a web page can access it.</li>
+
+<h4 class="example">Example</h4>
+
+<p id="demo2"></p>
+
+<script type="text/javascript">
+
+var carName = "Volvo";
+myFunction();
+
+function myFunction(){
+document.getElementById('demo2').innerHTML = "Care Name :" + carName;
+
+}
+
+</script>
+
+<li class="darkblue">In JavaScript, objects and functions are also variables.</li>
+
+
+<p> If you assign a value to a variable that has not been declared,
+it will automatically become a GLOBAL variable:</p>
+
+<p id="demo3"></p>
+
+<script>
+myFunction();
+
+// code here can use carName as a global variable
+document.getElementById("demo3").innerHTML = "I can display " + carName;
+
+function myFunction() {
+    carName = "Volvo";
+}
+</script>
+
+
+<br>
+<h2>Global Variables in HTML</h2>
+<li>With JavaScript, the global scope is the complete JavaScript environment.</li>
+<li>In HTML, the global scope is the window object. All global variables belong to the window object.</li>
+
+</body>
+</html>
