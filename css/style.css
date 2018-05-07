@@ -18,6 +18,11 @@ h2{
   font-family: inherit;
 }
 
+h3 {
+  color:#a61c3c;
+  font-family: sans-serif;
+}
+
 hr{
   color: #ffce00;
 }
