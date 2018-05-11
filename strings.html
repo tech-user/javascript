@@ -17,11 +17,92 @@
 
 <script type="text/javascript">
 
-var x = 'John Doe'; //String written inside quotes
+var x = 'John Doe USA'; //String written inside quotes
+var sln = x.length;
 
-document.getElementById('demo').innerHTML = "Name is : " + x;
+document.getElementById('demo').innerHTML = sln;
 </script>
 
+
+<br><br>
+
+<h3>Special Characters</h3>
+
+<p>Because strings must be written within quotes, JavaScript will misunderstand this string:</p>
+  <li class="darkblue"> var x = "We are the so-called "Vikings" from the north.";</li>
+
+<h4 class="example">Example</h4>
+
+<p id="demo2"></p>
+<script type="text/javascript">
+var x = "I am the programmer in \"Php\". "
+
+document.getElementById('demo2').innerHTML = x;
+
+</script>
+
+
+
+<p>The sequence \'  inserts a single quote in a string:</p>
+<h4 class="example">Example-2</h4>
+
+<p id="demo3"></p>
+
+<script type="text/javascript">
+
+var x = "i\'am honey";
+
+document.getElementById('demo3').innerHTML = x;
+
+</script>
+
+<br>
+
+<h4 class="spl">Six other escape sequences are valid in JavaScript:</h4>
+<li>\b = Backspace</li>
+<li>\f 	= Form Feed</li>
+<li>\n 	= New Line</li>
+<li>\r 	= Carriage Return</li>
+<li>\t 	= Horizontal Tabulator</li>
+<li>\v 	= Vertical Tabulator</li>
+
+<br>
+
+<h3>Strings Can be Objects</h3>
+<p>Normally, JavaScript strings are primitive values, created from literals:</p>
+<p>var firstName = "John";<br>
+  But strings can also be defined as objects with the keyword new. <br>
+  var firstName = new String("John");
+</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo4"></p>
+
+<script type="text/javascript">
+var x  = "Macintosh";
+var y = new String("Macintosh");
+
+document.getElementById('demo4').innerHTML = typeof x +"<br>" +typeof y;
+
+</script>
+
+<p class="red">Don't create strings as objects. It slows down execution speed. <br>
+The new keyword complicates the code. This can produce some unexpected results:</p>
+
+<br>
+
+<h3>Never Create Strings as objects.</h3>
+<p>Strings and objects cannot be safely compared.</p>
+<p> When using the == operator, equal strings are equal:</p>
+
+<p id="demo5"></p>
+
+<script>
+var x = "John";              // x is a string
+var y = new String("John");  // y is an object
+document.getElementById("demo5").innerHTML = (x==y);
+</script>
 
 </body>
 </html>
