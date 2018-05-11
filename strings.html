@@ -104,5 +104,76 @@ var y = new String("John");  // y is an object
 document.getElementById("demo5").innerHTML = (x==y);
 </script>
 
+
+<br>
+
+<h3>Never Create Strings as objects.</h3>
+<p class="darkblue">JavaScript objects cannot be compared.</p>
+
+<p id="demo6"></p>
+
+<script>
+var x = new String("John");  // x is an object
+var y = new String("John");  // y is an object
+document.getElementById("demo6").innerHTML = (x==y);
+</script>
+
+<br>
+
+<h2>JavaScript String Methods</h2>
+<p>The <i class="spl">indexOf()</i> method returns the position of the first occurrence of a specified text:</p>
+
+<h4 class="example">Example</h4>
+<p id="demo7"></p>
+
+<script type="text/javascript">
+var str = "How are you 'Ganesh' ";
+var pos = str.indexOf("Ganesh");
+
+document.getElementById('demo7').innerHTML = pos;
+
+</script>
+
+<br>
+<h3>Searching for a String in a String</h3>
+<p>The <i class="spl">search()</i> method searches a string for a specified value and returns the position of the match:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo8"></p>
+<script type="text/javascript">
+
+var str = "Find the 'word'";
+var pos = str.search("word");
+
+document.getElementById('demo8').innerHTML = pos;
+
+</script>
+<br>
+<h3>Extracting String Parts</h3>
+
+<p>There are 3 methods for extracting a part of a string:</p>
+<li>slice(start, end)</li>
+<li>substring(start, end)</li>
+<li>substr(start, length)</li>
+
+<h3>The slice() Method</h3>
+<p>slice() extracts a part of a string and returns the extracted part in a new string.</p>
+
+<p>The method takes 2 parameters: the starting index (position), and the ending index (position).</p>
+<p>This example slices out a portion of a string from position 7 to position 13:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo9"></p>
+<script type="text/javascript">
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7, 13);
+
+document.getElementById('demo9').innerHTML = res;
+
+</script>
+
+
 </body>
 </html>
