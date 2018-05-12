@@ -133,5 +133,33 @@ var y = new Number(123);
 document.getElementById("demo6").innerHTML = typeof x + "<br>" + typeof y;
 </script>
 
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+
+<br>
+
+<h1>Number Methods and Properties</h1>
+
+<p>Primitive values (like 3.14 or 2014), cannot have properties and methods (because they are not objects).</p>
+<p>But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.</p>
+
+<h3>The toString() Method</h3>
+<li><i class="spl">toString()</i> returns a number as a string.</li>
+
+<h4 class="example">Example</h4>
+<p id="demo7"></p>
+
+<script>
+var x = 123;
+document.getElementById("demo7").innerHTML =
+    x.toString() + "<br>" +
+   (123).toString() + "<br>" +
+   (100 + 23).toString();
+</script>
+
 </body>
 </html>
