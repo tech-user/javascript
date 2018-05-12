@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Numbers</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<h1>JavaScript Numbers</h1>
+<li class="spl">JavaScript has only one type of number. Numbers can be written with or without decimals.</li>
+
+<h4 class="example">Example</h4>
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+var x = 10.3;
+var y = 7;
+
+document.getElementById('demo').innerHTML = x + "<br>" + y;
+
+</script>
+
+<br>
+<li>Extra large or extra small numbers can be written with scientific (exponent) notation:</li>
+<h4 class="example">Example</h4>
+
+<p id="demo1"></p>
+
+<script>
+var x = 123e5;
+var y = 123e-5;
+document.getElementById("demo1").innerHTML = x + "<br>" + y;
+</script>
+
+<br>
+
+<p class="spl">JavaScript Numbers are Always 64-bit Floating Point</p>
+<p class="spl">Unlike many other programming languages, JavaScript does not define different types of numbers, like integers, short, long, floating-point etc.</p>
+
+<p class="spl">JavaScript numbers are always stored as double precision floating point numbers, following the international IEEE 754 standard.
+</p>
+
+<p class="spl">This format stores numbers in 64 bits, where the number (the fraction) is stored in bits 0 to 51, the exponent in bits 52 to 62, and the sign in bit 63:</p>
+
+</body>
+</html>
