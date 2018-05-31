@@ -136,9 +136,7 @@ document.getElementById("demo6").innerHTML = typeof x + "<br>" + typeof y;
 <hr>
 <hr>
 <hr>
-<hr>
-<hr>
-<hr>
+
 
 <br>
 
@@ -161,7 +159,47 @@ document.getElementById("demo7").innerHTML =
    (100 + 23).toString();
 </script>
 
+
 <br>
+<br>
+
+<h3>The toExponential() Method</h3>
+
+<p><i class="spl">toExponential()</i> returns a string, with a number rounded and written using exponential notation.</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo8"></p>
+<script type="text/javascript">
+
+var x = 8.237;
+
+document.getElementById('demo8').innerHTML =
+x.toExponential() + "<br>" +
+x.toExponential(2) + "<br>" +
+x.toExponential(4) + "<br>" +
+x.toExponential(6) + "<br>";
+</script>
+
+
+<br>
+<br>
+
+<h3>The toFixed() Method</h3>
+
+<p><i class="spl">toFixed()</i> returns a string, with the number written with a specified number of decimals:</p>
+
+<p id="demo9"></p>
+<script type="text/javascript">
+
+var x = 8.237;
+
+document.getElementById('demo9').innerHTML =
+x.toFixed() + "<br>" +
+x.toFixed(2) + "<br>" +
+x.toFixed(4) + "<br>" +
+x.toFixed(6) + "<br>";
+</script>
 
 
 </body>
