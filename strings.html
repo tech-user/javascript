@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Strings</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+
+<h1>JavaScript Strings</h1>
+
+<h4 class="example">Example</h4>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+var x = 'John Doe USA'; //String written inside quotes
+var sln = x.length;
+
+document.getElementById('demo').innerHTML = sln;
+</script>
+
+
+<br><br>
+
+<h3>Special Characters</h3>
+
+<p>Because strings must be written within quotes, JavaScript will misunderstand this string:</p>
+  <li class="darkblue"> var x = "We are the so-called "Vikings" from the north.";</li>
+
+<h4 class="example">Example</h4>
+
+<p id="demo2"></p>
+<script type="text/javascript">
+var x = "I am the programmer in \"Php\". "
+
+document.getElementById('demo2').innerHTML = x;
+
+</script>
+
+
+
+<p>The sequence \'  inserts a single quote in a string:</p>
+<h4 class="example">Example-2</h4>
+
+<p id="demo3"></p>
+
+<script type="text/javascript">
+
+var x = "i\'am honey";
+
+document.getElementById('demo3').innerHTML = x;
+
+</script>
+
+<br>
+
+<h4 class="spl">Six other escape sequences are valid in JavaScript:</h4>
+<li>\b = Backspace</li>
+<li>\f 	= Form Feed</li>
+<li>\n 	= New Line</li>
+<li>\r 	= Carriage Return</li>
+<li>\t 	= Horizontal Tabulator</li>
+<li>\v 	= Vertical Tabulator</li>
+
+<br>
+
+<h3>Strings Can be Objects</h3>
+<p>Normally, JavaScript strings are primitive values, created from literals:</p>
+<p>var firstName = "John";<br>
+  But strings can also be defined as objects with the keyword new. <br>
+  var firstName = new String("John");
+</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo4"></p>
+
+<script type="text/javascript">
+var x  = "Macintosh";
+var y = new String("Macintosh");
+
+document.getElementById('demo4').innerHTML = typeof x +"<br>" +typeof y;
+
+</script>
+
+<p class="red">Don't create strings as objects. It slows down execution speed. <br>
+The new keyword complicates the code. This can produce some unexpected results:</p>
+
+<br>
+
+<h3>Never Create Strings as objects.</h3>
+<p>Strings and objects cannot be safely compared.</p>
+<p> When using the == operator, equal strings are equal:</p>
+
+<p id="demo5"></p>
+
+<script>
+var x = "John";              // x is a string
+var y = new String("John");  // y is an object
+document.getElementById("demo5").innerHTML = (x==y);
+</script>
+
+
+<br>
+
+<h3>Never Create Strings as objects.</h3>
+<p class="darkblue">JavaScript objects cannot be compared.</p>
+
+<p id="demo6"></p>
+
+<script>
+var x = new String("John");  // x is an object
+var y = new String("John");  // y is an object
+document.getElementById("demo6").innerHTML = (x==y);
+</script>
+
+<br>
+
+<h2>JavaScript String Methods</h2>
+<p>The <i class="spl">indexOf()</i> method returns the position of the first occurrence of a specified text:</p>
+
+<h4 class="example">Example</h4>
+<p id="demo7"></p>
+
+<script type="text/javascript">
+var str = "How are you 'Ganesh' ";
+var pos = str.indexOf("Ganesh");
+
+document.getElementById('demo7').innerHTML = pos;
+
+</script>
+
+<br>
+<h3>Searching for a String in a String</h3>
+<p>The <i class="spl">search()</i> method searches a string for a specified value and returns the position of the match:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo8"></p>
+<script type="text/javascript">
+
+var str = "Find the 'word'";
+var pos = str.search("word");
+
+document.getElementById('demo8').innerHTML = pos;
+
+</script>
+<br>
+<h3>Extracting String Parts</h3>
+
+<p>There are 3 methods for extracting a part of a string:</p>
+<li>slice(start, end)</li>
+<li>substring(start, end)</li>
+<li>substr(start, length)</li>
+
+<h3>The slice() Method</h3>
+<p>slice() extracts a part of a string and returns the extracted part in a new string.</p>
+
+<p>The method takes 2 parameters: the starting index (position), and the ending index (position).</p>
+<p>This example slices out a portion of a string from position 7 to position 13:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo9"></p>
+<script type="text/javascript">
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7,13);
+
+document.getElementById('demo9').innerHTML = res;
+
+</script>
+
+<br>
+
+<h3>The substring() Method</h3>
+
+<li><i class="spl">substring()</i> is similar to <i class="spl">slice()</i></li>
+<li>The difference is that <i class="spl">substring()</i> cannot accept negative indexes.</li>
+
+
+<h4 class="example">Example</h4>
+
+<p id="demo10"></p>
+
+<script type="text/javascript">
+
+var str = "Apple, Banana, Kiwi";
+var res = str.substring(7,13);
+
+
+document.getElementById('demo10').innerHTML = res;
+
+</script>
+
+
+
+<br>
+
+<h3>The substr() Method</h3>
+
+<li><i class="spl">substr()</i> is similar to <i class="spl">slice()</i>.</li>
+
+<p>The difference is that the second parameter specifies the length of the extracted part.</p>
+
+
+<h4 class="example">Example</h4>
+
+<p id="demo11"></p>
+
+<script>
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7,6);
+document.getElementById("demo11").innerHTML = res;
+</script>
+
+<br>
+
+<h3>Replacing String Content</h3>
+
+<p>The <i class="spl">replace()</i> method replaces a specified value with another value in a string:</p>
+
+<h4 class="example">Example</h4>
+
+<button type="button" name="button" onclick="myFunction()">Try</button>
+
+<p id="demo12">Please visit W3Schools!</p>
+
+<script type="text/javascript">
+
+ function myFunction() {
+  var str = document.getElementById('demo12').innerHTML;
+  var txt = str.replace("W3Schools!", "Apple Inc");
+document.getElementById('demo12').innerHTML = txt;
+ }
+
+</script>
+
+<h4 class="example">Note</h4>
+
+<li>The <i class="spl">replace()</i> method does not change the string it is called on. It returns a new string.</li>
+<li>By default, the <i class="spl">replace()</i> function replaces only the first match:</li>
+<li>By default, the <i class="spl">replace()</i> function is case sensitive. Writing MICROSOFT (with upper-case) will not work:</li>
+
+<p>To replace case insensitive, use a regular expression with an <i class="spl">/i</i> flag (insensitive):</p>
+
+<h4 class="example">Example</h4>
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo13">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("demo13").innerHTML;
+    var txt = str.replace(/MICROSOFT/i,"W3Schools");
+    document.getElementById("demo13").innerHTML = txt;
+}
+</script>
+
+<br>
+<p class="darkblue">To replace all matches, use a regular expression with a /g flag (global match):</p>
+
+<h4 class="example">Example</h4>
+
+<p>Replace all occurrences of "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo14">Please visit Microsoft and Microsoft!</p>
+
+<script>
+function myFunction() {
+    var str = document.getElementById("demo14").innerHTML;
+    var txt = str.replace(/Microsoft/g,"W3Schools");
+    document.getElementById("demo14").innerHTML = txt;
+}
+</script>
+
+<br>
+<h3>Converting to Upper and Lower Case</h3>
+
+<p>A string is converted to upper case with <i class="spl">toUpperCase()</i>:</p>
+<h4 class="example">Example</h4>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo15">Hello World!</p>
+
+<script>
+function myFunction() {
+    var text = document.getElementById("demo15").innerHTML;
+    document.getElementById("demo15").innerHTML = text.toUpperCase();
+}
+</script>
+
+<li>A string is converted to lower case with <i class="spl">toLowerCase()</i></li>
+
+<br>
+<h3>The concat() Method</h3>
+<li><i class="spl">concat()</i> joins two or more strings:</li>
+
+<h4 class="example">Example</h4>
+
+
+<p id="demo16"></p>
+
+<script>
+var text1 = "Hello";
+var text2 = "World!";
+var text3 = text1.concat(" ",text2);
+document.getElementById("demo16").innerHTML = text3;
+</script>
+
+
+
+<br>
+
+<h3>Converting a String to an Array</h3>
+<p>A string can be converted to an array with the <i class="spl">split()</i> method:</p>
+<h4 class="example">Example</h4>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo17"></p>
+
+<script>
+function myFunction() {
+    var str = "a,b,c,d,e,f";
+    var arr = str.split(",");
+    document.getElementById("demo17").innerHTML = arr[0];
+}
+</script>
+
+<h4 class="example">Example 2</h4>
+
+<p id="demo18"></p>
+<script type="text/javascript">
+var str = "Hello";
+var arr = str.split("");
+var text = "";
+var i;
+for (i=0; i<arr.length; i++){
+  text += arr[i] + "<br>"
+}
+document.getElementById('demo18').innerHTML = text;
+</script>
+
+
+
+
+</body>
+</html>

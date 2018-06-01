@@ -15,7 +15,7 @@ h1{
 h2{
 
   color:#c4560a;
-  font-family: inherit;
+  font-family: sans-serif;
 }
 
 h3 {
@@ -49,6 +49,6 @@ color: red;
   color: darkblue;
 }
 
-.orange {
-  color:orange;
+.spl {
+color:#a61c3c;
 }
