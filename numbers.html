@@ -188,8 +188,9 @@ x.toExponential(6) + "<br>";
 <h3>The toFixed() Method</h3>
 
 <p><i class="spl">toFixed()</i> returns a string, with the number written with a specified number of decimals:</p>
-
+<h4 class="example">Example</h4>
 <p id="demo9"></p>
+
 <script type="text/javascript">
 
 var x = 8.237;
@@ -207,7 +208,7 @@ x.toFixed(6) + "<br>";
 <h3>The toPrecision() Method</h3>
 
 <p><i class="spl">toPrecision()</i> returns a string, with a number written with a specified length:</p>
-
+<h4 class="example">Example</h4>
 <p id="demo10"></p>
 
 <script type="text/javascript">
@@ -222,7 +223,98 @@ x.toPrecision(6) + "<br>";
 
 </script>
 
+<br>
+<br>
 
+
+<h3>The valueOf() Method</h3>
+<p><i class="spl">valueOf()</i> returns a number as a number.</p>
+<h4 class="example">Example</h4>
+<p id="demo11"></p>
+
+<script>
+var x = 123;
+
+document.getElementById('demo11').innerHTML =
+
+x.valueOf() + "<br />" +
+(123).valueOf() + "<br>" +
+(100 + 23).valueOf() + "<br>" ;
+</script>
+
+<br><br>
+<h3>Converting Variables to Numbers</h3>
+
+<p>There are 3 JavaScript methods that can be used to convert variables to numbers:</p>
+
+<li>The Number() method</li>
+<li>The parseInt() method</li>
+<li>The parseFloat() method</li>
+
+<p>These methods are not <i class="spl">number</i> methods, but <i class="spl">global</i> JavaScript methods.</p>
+
+<br><br>
+<h3>Global Methods</h3>
+
+<i class="spl">Number()</i> = Returns a number, converted from its argument. <br>
+<i class="spl">parseFloat()</i>	= Parses its argument and returns floating point number. <br>
+<i class="spl">parseInt()</i>	= Parses its argument and returns an integer.
+
+<br><br>
+
+<h3>The Number() Method</h3>
+<p><i class="spl">Number()</i> can be used to convert JavaScript variables to numbers:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo12"></p>
+<script type="text/javascript">
+document.getElementById("demo12").innerHTML =
+Number(true) + "<br>" +
+Number(false) + "<br>" +
+Number(" 10") + "<br>" +
+Number("10 ") + "<br>" +
+Number("10 6") + "<br>" +
+Number("JohnDoe");
+
+</script>
+
+<br><br>
+
+<h3>The parseInt() Method</h3>
+
+<p><i class="spl">parseInt()</i> parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo13"></p>
+
+<script>
+document.getElementById("demo13").innerHTML =
+    parseInt("10") + "<br>" +
+    parseInt("10.33") + "<br>" +
+    parseInt("10 6") + "<br>" +
+    parseInt("10 years") + "<br>" +
+    parseInt("years 10");
+</script>
+
+
+<br><br>
+
+
+
+<p>parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:</p>
+
+<p id="demo14"></p>
+
+<script>
+document.getElementById("demo14").innerHTML =
+    parseFloat("10") + "<br>" +
+    parseFloat("10.33") + "<br>" +
+    parseFloat("10 6") + "<br>" +
+    parseFloat("10 years") + "<br>" +
+    parseFloat("years 10");
+</script>
 
 </body>
 </html>
