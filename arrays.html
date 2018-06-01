@@ -16,13 +16,38 @@
 <p id="demo1"></p>
 
 <script type="text/javascript">
-var cars = ["Saab", "Volvo", "Jeep"];
+var cars = [
+  "Saab",
+  "Volvo",
+  "Jeep",
+  "Duster"
+]; //multiple lines acceptted
 
 document.getElementById('demo1').innerHTML = "Cars : " + cars;
 
 </script>
 
+<br><br>
+<h3>Arrays are Objects</h3>
+<p>Arrays are a special type of objects. The <i class="spl">typeof</i> operator in JavaScript returns "object" for arrays. <br> But, JavaScript arrays are best described as arrays.</p>
+<p>Arrays use <i class="spl">numbers</i> to access its "elements".</p>
 
+<h4 class="example">Example</h4>
+
+<p id="demo2"></p>
+
+<script type="text/javascript">
+var person = {
+firstName : "John",
+secondName : "Doe",
+age : 26
+
+};
+
+document.getElementById('demo2').innerHTML =
+person["firstName"];
+
+</script>
 
 
 </body>
