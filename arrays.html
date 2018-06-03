@@ -82,6 +82,74 @@ myArray[<i class="spl">2</i>] = myCars;<br>
 
 <p>The <i class="spl">length</i> property of an array returns the length of an array (the number of array elements).</p>
 
+<p id="demo3"></p>
+
+<script type="text/javascript">
+var fruits = ["banana","Apple","Kiwi","Mango", "Sapota"];
+
+document.getElementById('demo3').innerHTML = fruits.length;
+
+</script>
+<br>
+<br>
+
+<h3>Looping Array Elements</h3>
+
+<p>The best way to loop through an array, is using a "for" loop:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo4"></p>
+<script type="text/javascript">
+var fruits, text, fLen, i;
+
+fruits = ["Banana","Apple","Mango","Kiwi"];
+fLen = fruits.length;
+text = "<ul>";
+
+for (i=0; i<fLen; i++){
+text += "<li>" + fruits[i] + "</li>"
+
+}
+text += "</ul>"
+document.getElementById('demo4').innerHTML = text;
+
+</script>
+<br>
+<br>
+
+<h3>Adding Array Elements</h3>
+
+<p>The easiest way to add a new element to an array is using the push method:</p>
+
+<h4 class="example">Example</h4>
+
+<button type="button" onclick="myFunction()">Tryit</button>
+
+<p id="demo5"></p>
+
+<script type="text/javascript">
+var fruits = ["Banana", "Apple", "Mango", "Kiwi"];
+
+document.getElementById('demo5').innerHTML = fruits;
+
+function myFunction() {
+  fruits.push("Lemon");
+  document.getElementById('demo5').innerHTML = fruits;
+}
+
+</script>
+<br><br>
+
+<h2>Associative Arrays</h2>
+<p>Many programming languages support arrays with named indexes.</p>
+<p>Arrays with named indexes are called associative arrays (or hashes).</p>
+
+<p>JavaScript does not support arrays with named indexes.</p>
+
+<p>In JavaScript, arrays always use numbered indexes.</p>
+
+
 
 
 </body>
