@@ -182,6 +182,71 @@ document.getElementById('demo6').innerHTML = person[0] + " " + person.length;
 
 <p>The JavaScript method <i class="spl">toString()</i> converts an array to a string of (comma separated) array values.</p>
 
+<h4 class="example">Example</h4>
+<p id="demo7"></p>
+
+<script type="text/javascript">
+var fruits = ["Banana",
+  "Orange",
+  "Apple",
+  "Kiwi"];
+
+document.getElementById('demo7').innerHTML = fruits.toString();
+
+</script>
+
+<br>
+
+<h3>Popping and Pushing</h3>
+
+<p>When you work with arrays, it is easy to remove elements and add new elements. This is what popping and pushing is:</p>
+<p>Popping items <i class="spl">out</i> of an array, or pushing items <i class="spl">into</i> an array.</p><br>
+
+<h3>Popping</h3>
+<p>The <i class="spl">pop()</i> method removes the last element from an array:</p>
+
+<p>The return value of the pop() method is the removed item.</p>
+
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo8").innerHTML = fruits;
+document.getElementById("demo9").innerHTML = fruits.pop();
+document.getElementById("demo10").innerHTML = fruits;
+</script>
+
+
+<br><br>
+<h3>Pushing</h3>
+<p>The <i class="spl">push()</i> method adds a new element to an array (at the end):</p>
+
+<h4 class="example">Example</h4>
+
+<button type="button" name="button" onclick="myFruits()">Push item</button>
+
+<p id="demo11"></p>
+
+<script type="text/javascript">
+var fruits = ["Banana", "Apple", "Mango", "Kiwi"];
+
+document.getElementById('demo11').innerHTML = fruits;
+
+function myFruits(){
+      fruits.push("Grapes","Goava");
+      document.getElementById('demo11').innerHTML = fruits;
+}
+
+
+</script>
+<br><br>
+
+<h3>Shifting Elements</h3>
+
+<p>Shifting is equivalent to popping, working on the first element instead of the last.</p>
+<p>The <i class="spl">shift()</i> method removes the first array element and "shifts" all other elements to a lower index.</p>
 
 
 </body>
