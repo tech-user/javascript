@@ -369,5 +369,104 @@ document.getElementById("demo19").innerHTML = fruits.toString();
 <li class="spl">All JavaScript objects have a <i>toString()</i> method.</li>
 
 
+<br>
+<br>
+<hr>
+<h2>JavalScript Sorting Arrays</h2>
+<hr>
+<h3>Sorting an Array</h3>
+<p>The <i class="spl">sort()</i> method sorts an array alphabetically:</p>
+<h4 class="example">Example</h4>
+
+<button type="button" onclick="myFunction()" name="button">Try it</button>
+<p id="demo20"></p>
+
+<script type="text/javascript">
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById('demo20').innerHTML = fruits;
+
+function myFunction(){
+  fruits.sort();
+
+  document.getElementById('demo20').innerHTML = fruits;
+}
+
+</script>
+
+
+<br>
+<br>
+
+<h3>Reversing an Array</h3>
+<p>The <i class="spl">reverse()</i> method reverses the elements in an array.</p>
+
+<h4 class="example">Example</h4>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo21"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo21").innerHTML = fruits;
+
+function myFunction() {
+    fruits.sort();
+    fruits.reverse();
+    document.getElementById("demo21").innerHTML = fruits;
+}
+</script>
+
+<br><br>
+
+<h3>Numaric Sort</h3>
+
+<h4 class="example">Example</h4>
+
+<button onclick="myFunction()">Try it</button>
+
+
+<li>Ascending</li>
+<p id="demo22"></p>
+
+<script>
+
+var points = [40, 100, 1, 5, 25, 10];
+
+document.getElementById("demo22").innerHTML = points;
+
+function myFunction() {
+hj
+    points.sort(function(a, b){return a - b});
+
+document.getElementById("demo22").innerHTML = points;
+
+}
+</script>
+
+
+
+<br>
+<li>Use the same trick to sort an array descending:</li>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo23"></p>
+
+<script>
+
+var points = [40, 100, 1, 5, 25, 10];
+
+document.getElementById("demo23").innerHTML = points;
+
+function myFunction() {
+
+    points.sort(function(a, b){return b - a});
+
+document.getElementById("demo23").innerHTML = points;
+
+}
+</script>
+
 </body>
 </html>
