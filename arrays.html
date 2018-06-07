@@ -272,7 +272,7 @@ document.getElementById('demo14').innerHTML = fruits;
 
 <h4 class="example">Example</h4>
 
-<button type="button" onclick="myFunction()" name="button">Try it</button>
+<button type="button" onclick="myFunction2()" name="button">Try it</button>
 
 <p id="demo15"></p>
 
@@ -282,7 +282,7 @@ var fruits = ["Banana","Apple","Mango", "Orange"];
 
 document.getElementById('demo15').innerHTML = fruits;
 
-function myFunction(){
+function myFunction2(){
 fruits.splice(2, 0, "Lemon", "Kiwi");
 document.getElementById('demo15').innerHTML = fruits;
 
@@ -378,7 +378,7 @@ document.getElementById("demo19").innerHTML = fruits.toString();
 <p>The <i class="spl">sort()</i> method sorts an array alphabetically:</p>
 <h4 class="example">Example</h4>
 
-<button type="button" onclick="myFunction()" name="button">Try it</button>
+<button type="button" onclick="myFunction3()" name="button">Try it</button>
 <p id="demo20"></p>
 
 <script type="text/javascript">
@@ -386,7 +386,7 @@ document.getElementById("demo19").innerHTML = fruits.toString();
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 document.getElementById('demo20').innerHTML = fruits;
 
-function myFunction(){
+function myFunction3(){
   fruits.sort();
 
   document.getElementById('demo20').innerHTML = fruits;
@@ -402,7 +402,7 @@ function myFunction(){
 <p>The <i class="spl">reverse()</i> method reverses the elements in an array.</p>
 
 <h4 class="example">Example</h4>
-<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction4()">Try it</button>
 
 <p id="demo21"></p>
 
@@ -410,7 +410,7 @@ function myFunction(){
 var fruits = ["Banana", "Orange", "Apple", "Mango"];
 document.getElementById("demo21").innerHTML = fruits;
 
-function myFunction() {
+function myFunction4() {
     fruits.sort();
     fruits.reverse();
     document.getElementById("demo21").innerHTML = fruits;
@@ -423,7 +423,7 @@ function myFunction() {
 
 <h4 class="example">Example</h4>
 
-<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction5()">Try it</button>
 
 
 <li>Ascending</li>
@@ -435,7 +435,7 @@ var points = [40, 100, 1, 5, 25, 10];
 
 document.getElementById("demo22").innerHTML = points;
 
-function myFunction() {
+function myFunction5() {
 hj
     points.sort(function(a, b){return a - b});
 
@@ -467,6 +467,67 @@ document.getElementById("demo23").innerHTML = points;
 
 }
 </script>
+
+<br>
+<br>
+
+<h3>The Compare Function</h3>
+
+<p>The purpose of the compare function is to define an alternative sort order.</p>
+<p>The compare function should return a negative, zero, or positive value, depending on the arguments:</p>
+
+<span class="spl">function(a, b){return a-b}</span> <br>
+
+<h4 class="example">Example</h4>
+
+<button type="button" onclick="arraySort1()" name="button">Try it</button>
+<button type="button" onclick="arraySort2()" name="button">Try it</button>
+
+<p id="demo24"></p>
+
+<script type="text/javascript">
+var points = [20, 50, 1, 3, 100, 10];
+
+document.getElementById('demo24').innerHTML = points;
+
+function arraySort1(){
+  points.sort();
+  document.getElementById('demo24').innerHTML = points;
+
+}
+
+function arraySort2(){
+
+  points.sort(
+      function (a, b){
+        return a - b;
+
+      }
+    );
+    document.getElementById('demo24').innerHTML = points;
+}
+
+</script>
+
+<br>
+
+<h3>Math.max() on an Array</h3>
+<p>You can use Math.max.apply to find the highest number in an array:</p>
+
+<h4 class="example">Example</h4>
+
+<p>The highest number is <span id="demo25"></span>.</p>
+
+<script>
+var points = [40, 100, 1, 5, 25, 10, 101];
+document.getElementById("demo25").innerHTML = myArrayMax(points);
+
+function myArrayMax(arr) {
+    return Math.max.apply(null, arr);
+}
+</script>
+<span class="spl">You can use Math.min.apply to find the lowest number in an array:</span>
+
 
 </body>
 </html>
