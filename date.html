@@ -9,16 +9,45 @@
 </head>
 <body>
   <h1>JavaScript Date Objects</h1>
+<hr>
+<h3>Creating Date Objects</h3>
 
-  <h3>JavaScript new Date()</h3>
-  <p id="demo26"></p>
+<h4>There are 4 ways to create a new date object:</h4>
 
-  <script type="text/javascript">
-  var d = new Date();
+<li>new Date()</li>
+<li>new Date(year, month, day, hours, minutes, seconds, milliseconds)</li>
+<li>new Date(milliseconds)</li>
+<li>new Date(date string)</li>
 
-  document.getElementById('demo26').innerHTML = d;
 
-  </script>
+<br><br>
+
+<h3>new Date()</h3>
+<p><i class="spl">new Date()</i> creates a new date object with the current date and time:</p>
+<p id="demo"></p>
+
+<script type="text/javascript">
+var d = new Date();
+
+document.getElementById('demo').innerHTML = d;
+
+</script>
+<br><br>
+
+<h3>new Date(year, month, ...)</h3>
+<p><i class="spl">new Date(year, month, ...)</i> creates a new date object with a specified date and time.</p>
+<p>7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):</p>
+
+
+<h4 class="example">Example</h4>
+
+<p id="demo1"></p>
+
+<script>
+var d = new Date(2018, 10, 24, 10, 33, 30, 0);
+document.getElementById("demo1").innerHTML = d;
+</script>
+
 
 </body>
 </html>
