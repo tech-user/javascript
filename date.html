@@ -57,5 +57,52 @@ document.getElementById("demo1").innerHTML = d;
 <h3>Previous Century</h3>
 <p>One and two digit years will be interpreted as <i class="spl">19xx</i>:</p>
 
+<p>Two digit years will be interpreted as 19xx:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo2"></p>
+
+<script>
+var d = new Date(99, 11, 24);
+document.getElementById("demo2").innerHTML = d;
+</script>
+
+<br><br>
+
+<h2>Date Methods</h2>
+<p>When a Date object is created, a number of methods allow you to operate on it.</p>
+<p>Date methods allow you to get and set the year, month, day, hour, minute, second, and millisecond of date objects, using either local time or UTC (universal, or GMT) time.</p>
+
+<br>
+<h3>toUTCString()</h3>
+<h4 class="example">Example</h4>
+
+<p id="demo3"></p>
+
+<script type="text/javascript">
+var d = new Date();
+
+document.getElementById("demo3").innerHTML = d.toUTCString();
+
+</script>
+
+<br>
+<h3>toDateString()</h3>
+<h4 class="example">Example</h4>
+
+<p id="demo4"></p>
+
+<script type="text/javascript">
+var d = new Date();
+
+document.getElementById("demo4").innerHTML = d.toDateString();
+
+</script>
+
+<hr>
+
+<h2>JavaScript Date Formats</h2>
+
 </body>
 </html>
