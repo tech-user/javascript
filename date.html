@@ -104,5 +104,50 @@ document.getElementById("demo4").innerHTML = d.toDateString();
 
 <h2>JavaScript Date Formats</h2>
 
+<table>
+  <caption><h3>JavaScript Date Input</h3></caption>
+<tr>
+  <th>Type</th>
+  <th>Example</th>
+</tr>
+
+<tr>
+  <td>ISO Date</td>
+  <td>"2015-03-25" (The International Standard)</td>
+</tr>
+
+<tr>
+  <td>Short Date</td>
+  <td>"03/25/2015"</td>
+</tr>
+
+<tr>
+  <td>Long Date</td>
+  <td>"Mar 25 2015" or "25 Mar 2015"</td>
+</tr>
+</table>
+
+<br>
+<li>The ISO format follows a strict standard in JavaScript.</li>
+<li>The other formats are not so well defined and might be browser specific.</li>
+
+<br>
+
+<h3>JavaScript Short Dates.</h3>
+<p>Short dates are written with an <span class="spl">"MM/DD/YYYY"</span>syntax like this:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo5"></p>
+
+<script type="text/javascript">
+var d = new Date("05/03/2017");
+
+document.getElementById('demo5').innerHTML = d;
+
+</script>
+
+
+
 </body>
 </html>

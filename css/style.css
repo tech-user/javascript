@@ -52,3 +52,15 @@ color: red;
 .spl {
 color:#a61c3c;
 }
+
+table, th, td {
+    border: 1px solid #33363b;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+th {
+  text-align: left;
+  font-family: sans-serif;
+  color: #d74022;
+}
