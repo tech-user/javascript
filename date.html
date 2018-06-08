@@ -258,8 +258,41 @@ document.getElementById('demo6').innerHTML = d;
 
 
 </table>
+<br>
+<h3>setFullYear() Method</h3>
+<p>The <i class="spl">setFullYear()</i> method sets the year of a date object. In this example to 2020:</p>
+<h4 class="example">Example</h4>
+<p id="demo7"></p>
+<script type="text/javascript">
+var d = new Date();
+d.setFullYear(2020);
+
+document.getElementById('demo7').innerHTML = d;
+
+</script>
 
 
+<br>
+
+<h3>Compare Dates</h3>
+<h4 class="example">Example</h4>
+<p id="demo8"></p>
+
+<script type="text/javascript">
+var today, someday, text;
+today = new Date();
+someday = new Date();
+someday.setFullYear(2100, 0, 14);
+
+if (someday > today) {
+  text = "Today is before January 14, 2100";
+} else {
+  text = "Today is after January 14, 2100";
+
+}
+document.getElementById("demo8").innerHTML = text;
+
+</script>
 
 </body>
 </html>
