@@ -20,6 +20,63 @@
 <p>
   <img src="assets/jscompare.png" alt="">
 </p>
+<br>
+
+<h3>Logical Operators</h3>
+<p>
+  <img src="assets/logical.png" alt="">
+</p>
+
+<h4 class="example">Example</h4>
+<p id="demo"></p>
+
+<script type="text/javascript">
+var x = 6;
+var y = 3;
+
+document.getElementById('demo').innerHTML =
+(x<10 && y>1) + "<br>" +
+(x<10 && y<1);
+</script>
+
+<br>
+<h3>Conditional (Ternary) Operator</h3>
+<p>JavaScript also contains a conditional operator that assigns a value to a variable based on some condition.</p>
+<p>Syntax : <i class="spl">variablename = (condition) ? value1:value2</i></p>
+
+<h4 class="example"></h4>
+<input id="age" value="18">
+<button  onclick="myFunction2()">Try it</button>
+
+<p id="demo1"></p>
+<script type="text/javascript">
+function myFunction2(){
+  var age, votable;
+  age = document.getElementById('age').value;
+  votable = (age < 18)? "Too Young " : "Old enough";
+  document.getElementById('demo1').innerHTML = votable + " to Vote.";
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
