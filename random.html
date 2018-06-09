@@ -19,6 +19,36 @@
 document.getElementById('demo').innerHTML = Math.random();
 
 </script>
+<li class="spl">Math.random( ) always returns a number lower than 1.</li>
+<br>
+<h3>JavaScript Random Integers</h3>
+<p><span class="spl">Math.random( )</span> used with <span class="spl">Math.floor( )</span> can be used to return random integers.</p>
+<h4 class="example">Example</h4>
+<p id="demo1"></p>
+
+<script type="text/javascript">
+document.getElementById('demo1').innerHTML = Math.floor(Math.random() * 100);
+//returns a number between 0 and 99
+
+</script>
+
+<br><br>
+<h3>Proper Random Function</h3>
+<p>As you can see from the examples above, it might be a good idea to create a proper random function to use for all random integer purposes.</p>
+<p>This JavaScript function always returns a random number between min (included) and max (excluded):</p>
+
+<h4 class="example">Example</h4>
+
+<button type="button" name="button" onclick="document.getElementById('demo2').innerHTML = getRandomInteger(0, 10)">Click Me</button>
+
+<p id="demo2"></p>
+
+<script type="text/javascript">
+ function getRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+ }
+
+</script>
 
 </body>
 </html>
