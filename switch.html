@@ -32,6 +32,10 @@ switch (new Date().getDay()) {
 
   case 2:
     day = "Tueday";
+  break;
+
+  default:
+  day = "Looking forward to the Weekend";
 
 }
 
@@ -39,6 +43,62 @@ document.getElementById('demo').innerHTML = "Today is " + day;
 
 </script>
 
+<br>
+
+<h3>Common Code Blocks</h3>
+<p> Sometimes you will want different switch cases to use the same code.
+<br>
+In this example case 4 and 5 share the same code block, and 0 and 6 share another code block:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo1"></p>
+
+<script>
+var text;
+switch (new Date().getDay()) {
+    case 4:
+    case 5:
+        text = "Soon it is Weekend";
+        break;
+    case 0:
+    case 6:
+        text = "It is Weekend";
+        break;
+    default:
+        text = "Looking forward to the Weekend";
+}
+document.getElementById("demo1").innerHTML = text;
+</script>
+
+<br>
+<h3>Strict Comaprison</h3>
+<p class="spl">Switch cases use strict comparison (===).</p>
+
+<li>The values must be of the same type to match.</li>
+<li>A strict comparison can only be true if the operands are of the same type.</li>
+<li>In this example there will be no match for x:</li>
+
+
+<h4 class="example">Example</h4>
+
+
+<p id="demo2"></p>
+
+<script>
+var x = 0;
+
+switch (x) {
+    case 0:
+        text = "Off";
+        break;
+    case 1:
+        text = "On";
+    default:
+        text = "No value found";
+}
+document.getElementById("demo2").innerHTML = text;
+</script>
 
 </body>
 </html>
