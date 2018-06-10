@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Loops</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>JavaScript Loops</h1>
+<p>Loops can execute a block of code a number of times.</p>
+<h3>For Loop</h3>
+<p class="spl">Loops are handy, if you want to run the same code over and over again, each time with a different value.</p>
+
+<h4 class="example">Example</h4>
+<p id="demo"></p>
+<script type="text/javascript">
+var i;
+var cars = ["BMW", "Volvo", "Saab", "Ford"];
+var text = "";
+for (var i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
+}
+
+document.getElementById('demo').innerHTML = text;
+</script>
+
+</body>
+</html>
