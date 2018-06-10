@@ -11,7 +11,33 @@
 <h1>JavaScript Switch Statement</h1>
 <p class="spl">The switch statement is used to perform different actions based on different conditions.</p>
 <h4 class="example">Syntax</h4>
+<p>
+<img src="assets/switch.png" alt="">
 
+</p>
+
+<h4 class="example">Example</h4>
+<p id="demo"></p>
+<script type="text/javascript">
+var day;
+switch (new Date().getDay()) {
+
+  case 0:
+    day = "Sunday";
+    break;
+
+  case 1:
+    day = "Monday";
+    break;
+
+  case 2:
+    day = "Tueday";
+
+}
+
+document.getElementById('demo').innerHTML = "Today is " + day;
+
+</script>
 
 
 </body>
