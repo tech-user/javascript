@@ -56,7 +56,7 @@ for (var i = 0; i < 5; i++) {
 <p id="demo2"></p>
 
 <script>
-var cars = ["BMW", "Volvo", "Saab", "Ford", "Suzuki"];
+var cars = ["BMW", "Volvo", "Saab", "Ford", "Suzuki", "Maruti"];
 var i, len, text;
 for (i = 0, len = cars.length, text = ""; i < len; i++) {
     text += cars[i] + "<br>";
@@ -64,6 +64,26 @@ for (i = 0, len = cars.length, text = ""; i < len; i++) {
 
 document.getElementById("demo2").innerHTML = text;
 </script>
+
+<br>
+
+<h3>The For/In Loop</h3>
+<h4 class="example">Example</h4>
+
+<p id="demo3"></p>
+<script type="text/javascript">
+var txt = " ";
+var person = {fname:"Ganesh", lname:"Vadla", age:30};
+var x;
+
+for (x in person) {
+  txt += person[x] + " ";
+}
+document.getElementById("demo3").innerHTML = txt;
+</script>
+
+
+
 
 
 
