@@ -26,5 +26,46 @@ for (var i = 0; i < cars.length; i++) {
 document.getElementById('demo').innerHTML = text;
 </script>
 
+<br>
+
+<h3>Different Kinds of Loops</h3>
+<h4>JavaScript supports different kinds of loops:</h4>
+<li>for - loops through a block of code a number of times</li>
+<li>for/in - loops through the properties of an object</li>
+<li>while - loops through a block of code while a specified condition is true</li>
+<li>do/while - also loops through a block of code while a specified condition is true
+</li>
+<br>
+<h3>For Loop</h3>
+
+<h4 class="example">Example</h4>
+<p id="demo1"></p>
+
+<script type="text/javascript">
+var i;
+var text =" ";
+for (var i = 0; i < 5; i++) {
+      text += "The number is " + i + "<br>";
+}
+  document.getElementById('demo1').innerHTML = text;
+
+</script>
+
+<br>
+<h4 class="example">Example-2</h4>
+<p id="demo2"></p>
+
+<script>
+var cars = ["BMW", "Volvo", "Saab", "Ford", "Suzuki"];
+var i, len, text;
+for (i = 0, len = cars.length, text = ""; i < len; i++) {
+    text += cars[i] + "<br>";
+}
+
+document.getElementById("demo2").innerHTML = text;
+</script>
+
+
+
 </body>
 </html>
