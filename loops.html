@@ -109,11 +109,30 @@ while (i < 10) {
 
 
 <br>
+<h3>Do/While Loop</h3>
+<h4 class="exampl">Syntax</h4>
+<span>
+do { <br>
+&nbsp; code block <br>
+}<br>
+while (condition);
 
+</span>
 
+<br>
+<h4 class="example">Example</h4>
+<p id="demo5"></p>
+<script type="text/javascript">
+var text = "";
+var i = 0;
 
+do {
+  text += "The number is " + i + "<br>";
+  i++;
+} while (i < 10);
 
-
+document.getElementById('demo5').innerHTML = text;
+</script>
 
 </body>
 </html>
