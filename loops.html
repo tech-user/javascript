@@ -138,6 +138,30 @@ document.getElementById('demo5').innerHTML = text;
 <hr>
 
 <h1>Break and Continue</h1>
+<h3>JavaScript Labels</h3>
+<p>To label JavaScript statements you precede the statements with a label name and a colon: </p>
+<p class="spl">With a label reference, the break statement can be used to jump out of any code block: </p>
+
+<h4 class="example"></h4>
+<p id="demo8"></p>
+
+<script>
+var cars = ["BMW", "Volvo", "Saab", "Ford"];
+var text = "";
+
+list: {
+    text += cars[0] + "<br>";
+    text += cars[1] + "<br>";
+    text += cars[2] + "<br>";
+    break list;
+    text += cars[3] + "<br>";
+    text += cars[4] + "<br>";
+    text += cars[5] + "<br>";
+}
+
+document.getElementById("demo8").innerHTML = text;
+</script>
+
 
 
 </body>
