@@ -48,5 +48,191 @@ document.getElementById('demo1').innerHTML = text;
 <li>while - loops through a block of code while a specified condition is true</li>
 <li>do/while - also loops through a block of code while a specified condition is true</li>
 
+<br>
+
+<h3>Different Kinds of Loops</h3>
+<h4>JavaScript supports different kinds of loops:</h4>
+<li>for - loops through a block of code a number of times</li>
+<li>for/in - loops through the properties of an object</li>
+<li>while - loops through a block of code while a specified condition is true</li>
+<li>do/while - also loops through a block of code while a specified condition is true
+</li>
+<br>
+<h3>For Loop</h3>
+
+<h4 class="example">Example</h4>
+<p id="demo1"></p>
+
+<script type="text/javascript">
+var i;
+var text =" ";
+for (var i = 0; i < 5; i++) {
+      text += "The number is " + i + "<br>";
+}
+  document.getElementById('demo1').innerHTML = text;
+
+</script>
+
+<br>
+<h4 class="example">Example-2</h4>
+<p id="demo2"></p>
+
+<script>
+var cars = ["BMW", "Volvo", "Saab", "Ford", "Suzuki", "Maruti"];
+var i, len, text;
+for (i = 0, len = cars.length, text = ""; i < len; i++) {
+    text += cars[i] + "<br>";
+}
+
+document.getElementById("demo2").innerHTML = text;
+</script>
+
+<br>
+
+<h3>The For/In Loop</h3>
+<h4 class="example">Example</h4>
+
+<p id="demo3"></p>
+<script type="text/javascript">
+var txt = " ";
+var person = {fname:"Ganesh", lname:"Vadla", age:30};
+var x;
+
+for (x in person) {
+  txt += person[x] + " ";
+}
+document.getElementById("demo3").innerHTML = txt;
+</script>
+
+<br>
+<h3>While Loop</h3>
+<p>The while loop loops through a block of code as long as a specified condition is true.</p>
+<p class="spl">Syntax</p>
+<span>
+  While (condition) {<br>
+    code block to be executed<br>
+  }
+</span>
+<br>
+
+<h4 class="example">Example</h4>
+<p id="demo4"></p>
+
+<script type="text/javascript">
+var text = " ";
+var i=0;
+while (i < 10) {
+  text += "the number is " + i + "<br>";
+  i++;
+}
+
+  document.getElementById('demo4').innerHTML = text;
+</script>
+
+
+<br>
+<h3>Do/While Loop</h3>
+<h4 class="exampl">Syntax</h4>
+<span>
+do { <br>
+&nbsp; code block <br>
+}<br>
+while (condition);
+
+</span>
+
+<br>
+<h4 class="example">Example</h4>
+<p id="demo5"></p>
+<script type="text/javascript">
+var text = "";
+var i = 0;
+
+do {
+  text += "The number is " + i + "<br>";
+  i++;
+} while (i < 10);
+
+document.getElementById('demo5').innerHTML = text;
+</script>
+
+<br><br>
+<hr>
+
+<h1>Break and Continue</h1>
+<p>The break statement <span class="spl">"jumps out"</span> of a loop.</p>
+<p>The continue statement <span class="spl">"jumps over"</span> one iteration in the loop.</p>
+
+<h3>Break Statement</h3>
+<p>The break statement breaks the loop and continues executing the code after the loop (if any):</p>
+
+<h4 class="example">Example</h4>
+<p id="demo6"></p>
+
+<script type="text/javascript">
+
+var txt = "";
+var i;
+
+for (i = 0; i < 10; i++) {
+    if (i === 5) {
+      break;
+    }
+  txt += "The number is " + i + "<br>";
+}
+
+document.getElementById('demo6').innerHTML = txt;
+  </script>
+<br>
+
+<h3>The Continue Statement</h3>
+
+<p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo7"></p>
+
+<script type="text/javascript">
+var text = "";
+var i;
+for (var i = 0; i < 10; i++) {
+  if (i === 3) {
+    continue;
+  }
+  text += "The number is "+ i + "<br>";
+
+}
+document.getElementById('demo7').innerHTML = text;
+
+</script>
+
+<br>
+<h3>JavaScript Labels</h3>
+<p>To label JavaScript statements you precede the statements with a label name and a colon: </p>
+<p class="spl">With a label reference, the break statement can be used to jump out of any code block: </p>
+
+<h4 class="example"></h4>
+<p id="demo8"></p>
+
+<script>
+var cars = ["BMW", "Volvo", "Saab", "Ford"];
+var text = "";
+
+list: {
+    text += cars[0] + "<br>";
+    text += cars[1] + "<br>";
+    text += cars[2] + "<br>";
+    break list;
+    text += cars[3] + "<br>";
+    text += cars[4] + "<br>";
+    text += cars[5] + "<br>";
+}
+
+document.getElementById("demo8").innerHTML = text;
+</script>
+
+
+
 </body>
 </html>

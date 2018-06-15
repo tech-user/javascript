@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Errors</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>JavaScript Errors</h1>
+  <h3>Throw and Try to Catch</h3>
+<li>The try statement lets you test a block of code for errors.</li>
+<li>The catch statement lets you handle the error.</li>
+<li>The throw statement lets you create custom errors.</li>
+<li>The finally statement lets you execute code, after try and catch, regardless of the result.</li>
+<br>
+<h3>JavaScript try and catch</h3>
+<li>The try statement allows you to define a block of code to be tested for errors while it is being executed.</li>
+<li>The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.</li>
+
+<br>
+
+<h3>JavaScript Throws Errors</h3>
+<p>When an error occurs, JavaScript will normally stop and generate an error message.</p>
+<p>The technical term for this is: JavaScript will  throw an exception (throw an error).</p>
+
+<h3>The throw Statement</h3>
+<p>The throw statement allows you to create a custom error.</p>
+<p>Technically you can throw an exception (throw an error).</p>
+<p>The exception can be a JavaScript String, a Number, a Boolean or an Object:</p>
+<p>
+<img src="assets/js_error.png" alt="">
+</p>
+
+<h4 class="example">Input Validation Example</h4>
+<p>This example examines input. If the value is wrong, an exception (err) is thrown.</p>
+<p>The exception (err) is caught by the catch statement and a custom error message is displayed:</p>
+
+<p>Input number between 5 and 10</p>
+
+<input type="text" id="demo">
+<button type="button" onclick="myFunction()">Test input</button>
+
+<p id="p01"></p>
+
+<script type="text/javascript">
+
+function myFunction() {
+
+var message, x;
+message = document.getElementById('p01');
+message.innerHTML = "";
+x = document.getElementById('demo').value;
+
+try {
+  if (x == "") throw "empty";
+  if (isNaN(x)) throw "not a number";
+  x = Number(x);
+  if (x < 5)   throw "too low";
+  if (x > 10) throw "too high";
+
+  } catch (err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
