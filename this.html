@@ -33,6 +33,45 @@ document.getElementById('demo').innerHTML = person.fullName();
 
 </script>
 
+<br>
+
+<h3>What is "this"?</h3>
+
+<li>In a function definition, this refers to the "owner" of the function.</li>
+<li>In the example above, this refers to the person object.</li>
+<li>The person object "owns" the fullName method.</li>
+
+<br>
+
+<h3>Object Method Binding</h3>
+<p>In these examples, this is the person object (The person object is the "owner" of the
+function):</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo1"></p>
+
+<script type="text/javascript">
+// Create an object
+
+var person = {
+  firstName : "Ganesh",
+  secondName : "Vadla",
+  id : 510495,
+  fullName: function(){
+    return this.firstName + " " + this.secondName + " " + this.id;
+  }
+
+};
+
+//Display Data from object
+
+document.getElementById('demo1').innerHTML = person.fullName();
+
+
+</script>
+
+
 
 </body>
 </html>
