@@ -11,6 +11,75 @@
 
 <h1>JavaScript 6 - ECMAScript 6</h1>
 
+<h3>JavaScript let</h3>
+<p>The let statement allows you to declare a variable inside brackets <span class="spl">{}</span> scope.</p>
+<li>Redeclaring a variable using var can impose problems:</li>
+
+<h4 class="example">Example</h4>
+
+<p id="demo"></p>
+<script type="text/javascript">
+var x = 20; //Now x is 20
+
+{
+  let x = 30; // Now x is 30
+}
+
+document.getElementById('demo').innerHTML = " x = " + x; // Now x is 20
+
+</script>
+
+<br>
+<br>
+
+<h3>JavaScript const</h3>
+
+<p>The const statement is used to declare a variable with a constant value.</p>
+<p>It is similar to let, except that the value of the variable cannot be changed.</p>
+<p>The variable must be initialized when it is declared.</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo1"></p>
+
+<script type="text/javascript">
+  var x = 10;
+   {
+     const x = 5;
+   }
+document.getElementById('demo1').innerHTML = " x = " + x;
+</script>
+
+<br>
+
+<h3>Default Parameter Values</h3>
+
+<h4 class="example">Example</h4>
+
+<p id="demo2"></p>
+
+<script>
+function myFunction(x, y = 10) {
+  // y is 10 if not passed or undefined
+  return x + y;
+}
+document.getElementById("demo2").innerHTML = myFunction(5);
+</script>
+
+<br>
+
+<h3>Arrow Functions</h3>
+<p>Arrow functions allows a short syntax for writing function expressions.</p>
+<p>You don't need the function keyword, the return keyword, and the curly brackets.</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo3"></p>
+
+<script>
+const x = (x, y) => x * y;
+document.getElementById("demo3").innerHTML = x(5, 5);
+</script>
 
 </body>
 </html>
