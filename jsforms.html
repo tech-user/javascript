@@ -10,6 +10,75 @@
 <body>
 <h1>JavaScript Forms</h1>
 
+<h3>JavaScript Form Validation</h3>
+<p>HTML form validation can be done by JavaScript.</p>
+<p>If a form field (fname) is empty, this function alerts a message, and returns false, to prevent the form from being submitted:</p>
+
+<h4 class="example">Example</h4>
+
+<form name="myForm" action="" method="post" onsubmit="return validateForm()">
+  <label for="name">Name : </label>
+  <input type="text" name="fname">
+  <input type="submit" value="submit">
+</form>
+
+<script type="text/javascript">
+function validateForm(){
+
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == '') {
+    alert("Name must filled out");
+    return false;
+  }
+}
+
+</script>
+
+<br>
+
+<h3>JavaScript Can Validate Numeric Input</h3>
+<h4 class="example">Example</h4>
+<span>Enter value between 1 and 10</span> <br>
+
+<input id="numb">
+
+<button type="button"  onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+function myFunction() {
+  var x, text;
+  x = document.getElementById('numb').value; //get the value from input field
+
+  if (isNaN(x) ||  x < 1 || x > 10){
+        text = "Input is string, it is not Valid";
+        } else {
+            text = "input is number, ok";
+        }
+        document.getElementById('demo').innerHTML = text;
+
+}
+
+
+</script>
+
+
+<br>
+
+<h3>Data Validation</h3>
+<p>Data validation is the process of ensuring that user input is clean, correct, and useful.</p>
+
+<h4>Typical validation tasks are:</h4>
+<li>has the user filled in all required fields?</li>
+<li>has the user entered a valid date?</li>
+<li>has the user entered text in a numeric field?</li>
+<p>Most often, the purpose of data validation is to ensure correct user input.</p>
+
+<p>Validation can be defined by many different methods, and deployed in many different ways.</p>
+<p><span class="spl">Server side validation</span> is performed by a web server, after input has been sent to the server.</p>
+<p><span class="spl">Client side validation</span> is performed by a web browser, before input is sent to a web server.</p>
 
 </body>
 </html>
