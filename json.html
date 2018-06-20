@@ -8,8 +8,7 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
-  <h1>JavaScript JSON</h1>
+<h1>JavaScript JSON</h1>
 <li>JSON is a format for storing and transporting data.</li>
 <li>JSON is often used when data is sent from a server to a web page.</li>
 
@@ -19,6 +18,73 @@
 <li>JSON is lightweight data interchange format</li>
 <li>JSON is language independent *</li>
 <li>JSON is "self-describing" and easy to understand</li>
+
+<h4 class="example">JSON Example</h4>
+<p> <img src="assets/json.png" height="250" width="600" alt=""></p>
+
+<h2>JSON Syntax Rules</h2>
+<li>Data is in name/value pairs</li>
+<li>Data is separated by commas</li>
+<li>Curly braces hold objects</li>
+<li>Square brackets hold arrays</li>
+
+<br>
+
+<h3>JSON Data - A Name and a Value</h3>
+<p>JSON data is written as name/value pairs, just like JavaScript object properties.
+<br>
+A name/value pair consists of a field name (in double quotes), followed by a colon, followed by a value:</p>
+<span class="spl"> "firstName":"John"</span>
+<br>
+<h3>JSON Objects</h3>
+<p>JSON objects are written inside curly braces.
+<br>
+Just like in JavaScript, objects can contain multiple name/value pairs:
+</p>
+
+<span class="spl"> {"firstName":"John", "lastName":"Doe"}</span>
+
+<br>
+<h3>JSON Arrays</h3>
+
+<p>JSON arrays are written inside square brackets.
+<br>
+Just like in JavaScript, an array can contain objects:</p>
+
+
+<h4 class="example">Example</h4>
+<p class="spl">
+
+  "employees":[ <br>
+      {"firstName":"John", "lastName":"Doe"},<br>
+      {"firstName":"Anna", "lastName":"Smith"},<br>
+      {"firstName":"Peter", "lastName":"Jones"}<br>
+  ]
+
+</p>
+<br>
+
+<h3>Converting a JSON Text to a JavaScript Object</h3>
+<p>use the JavaScript built-in function JSON.parse() to convert the string into a JavaScript object:</p>
+
+<span class="spl">var obj = JSON.parse(text);</span>
+
+<h4 class="example">Example</h4>
+<p id="demo"></p>
+<script type="text/javascript">
+var text = '{"employees" : [' +
+'{"firstName":"Ganesh", "lastName":"Vadla"},' +
+'{"firstName":"Raju", "lastName":"Vadla"},' +
+'{"firstName":"Krishna", "lastName":"Vadla"}]}';
+
+obj = JSON.parse(text);
+document.getElementById('demo').innerHTML =
+obj.employees[1].firstName + " " +
+obj.employees[1].lastName;
+
+</script>
+
+
 
 
 </body>
