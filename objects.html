@@ -25,7 +25,7 @@ document.getElementById('demo').innerHTML = "Car Compnay : " + car;
 </script>
 
 <br>
-<p style="color:red;">Objects are variables too. But objects can contain many values. </p>
+<p style="color:#a93f55;">Objects are variables too. But objects can contain many values. </p>
 
 
 <h4 class="example">Example</h4>
@@ -66,11 +66,11 @@ document.getElementById('demo3').innerHTML =
 
 </script>
 
-<br>
+<br>s
 
 <h3>Object Methods</h3>
-<li style="color:red;">Methods are actions that can be performed on objects.</li>
-<li style="color:red;">Methods are stored in properties as function definitions.</li>
+<li style="color:#a93f55;">Methods are actions that can be performed on objects.</li>
+<li style="color:#a93f55;">Methods are stored in properties as function definitions.</li>
 
 <br>
 <h4>Accessing Object Methods</h4>
@@ -93,6 +93,85 @@ var person = {
 document.getElementById('demo4').innerHTML = " Full Name :" + person.fullName();
 
 </script>
+
+<br>
+
+<h3>JavaScript Primitives</h3>
+<p>A <span class="spl">primitive value</span> is a value that has no properties or methods.</p>
+<p>A <span class="spl">primitive data</span> type is data that has a primitive value.</p>
+<br>
+
+<h3>JavaScript defines 5 types of primitive data types:</h3>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>null</li>
+<li>undefined</li>
+
+<br>
+<h2>Creating a JavaScript Object</h2>
+<p>With JavaScript, you can define and create your own objects.</p>
+
+<li>Define and create a single object, using an object literal.</li>
+<li>Define and create a single object, with the keyword new.</li>
+<li>Define an object constructor, and then create objects of the constructed type.</li>
+<br>
+
+<h3>Using an Object Literal</h3>
+<p>This is the easiest way to create a JavaScript Object.
+<br>
+Using an object literal, you both define and create an object in one statement.</p>
+<h4 class="example">Example</h4>
+
+<p id="demo5"></p>
+<script type="text/javascript">
+var employee = {
+      firstName : "Ganesh",
+      secondName : "Vadla",
+      age : 32,
+      id : 510495
+
+};
+
+document.getElementById('demo5').innerHTML = employee.firstName + " " + employee.secondName + " " + employee.age + " " + employee.id;
+
+
+</script>
+<br>
+<h3>Using the JavaScript Keyword new Object()</h3>
+<p>The following example also creates a new JavaScript object with four properties:</p>
+<h4 class="example">Example</h4>
+
+<p id="demo6"></p>
+
+<script>
+var person = new Object();
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+
+document.getElementById("demo6").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+</script>
+
+<br>
+<p class="spl">The two examples above do exactly the same. There is no need to use new Object().<br>
+For simplicity, readability and execution speed, use the first one (the object literal method).</p>
+
+<br>
+
+<h2>JavaScript Object Properties</h2>
+<li>Properties are the values associated with a JavaScript object.</li>
+<li>A JavaScript object is a collection of unordered properties.</li>
+<li>Properties can usually be changed, added, and deleted, but some are read only.</li>
+
+<h4 class="example">The syntax for accessing the property of an object is:</h4>
+<p>objectName.property</p><!--person.age--> or
+<p>objectName["property"]</p> <!--person["age"]--> or
+<p>objectName[expression]</p> <!--x = "age"; person[x]-->
+
+
 
 </body>
 </html>
