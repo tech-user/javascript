@@ -171,6 +171,36 @@ For simplicity, readability and execution speed, use the first one (the object l
 <p>objectName["property"]</p> <!--person["age"]--> or
 <p>objectName[expression]</p> <!--x = "age"; person[x]-->
 
+<br>
+
+<h3>JavaScript for...in Loop</h3>
+<h4 class="example">Syntax</h4>
+
+
+for (variable in object) {
+  <br>
+  code to be executied <br>
+}
+
+<br>
+
+<h4 class="example">Example</h4>
+<p id="demo7"></p>
+
+<script type="text/javascript">
+var txt = " ";
+var person = {
+    fname : "John",
+    lname : "Doe",
+    age : 34
+  };
+for (x in person) {
+  txt += person[x] + " ";
+}
+document.getElementById('demo7').innerHTML = txt;
+
+</script>
+
 
 
 </body>
