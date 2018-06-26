@@ -201,6 +201,29 @@ document.getElementById('demo7').innerHTML = txt;
 
 </script>
 
+<br>
+
+<h3>Adding New Properties</h3>
+<p>You can add new properties to an existing object by simply giving it a value.</p>
+<p>Assume that the person object already exists - you can then give it new properties:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo8"></p>
+
+<script type="text/javascript">
+
+var person = {
+  fname : "Ganesh",
+  lname : "Vadla"
+
+};
+person.age = 32;
+document.getElementById('demo8').innerHTML = person.fname + " " + person.lname + " " + person.age;
+
+</script>
+
+
 
 
 </body>
