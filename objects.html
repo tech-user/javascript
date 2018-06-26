@@ -226,6 +226,26 @@ document.getElementById('demo8').innerHTML = person.fname + " " + person.lname +
 <br>
 <h2>JavaScript Object Methods</h2>
 
+<h4 class="example">Example</h4>
+
+<p id="demo9"></p>
+
+<script type="text/javascript">
+
+var imac = {
+  operating : "Mac OS",
+  ram : "8 GB",
+  storage : "1 TB",
+  fullSpecs : function() {
+        return this.operating + " " + this.ram + " " + this.storage;
+  }
+};
+
+
+document.getElementById('demo9').innerHTML = imac.fullSpecs();
+</script>
+
+
 
 
 </body>
