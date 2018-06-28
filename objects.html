@@ -309,6 +309,34 @@ document.getElementById('demo12').innerHTML = "My Father age is " + myFather.age
 
 </script>
 
+<br>
+<h3>Adding a Property to an Object</h3>
+<h4 class="example">Example</h4>
+
+<p id="demo13"></p>
+
+<script>
+
+// Constructor function for Person objects
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+
+// Create 2 Person objects
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+// Add nationality to first object
+myFather.nationality = "English";
+
+// Diplay nationality
+document.getElementById("demo13").innerHTML =
+"My father is " + myFather.nationality;
+
+</script>
 
 </body>
 </html>
