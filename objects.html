@@ -224,6 +224,8 @@ document.getElementById('demo8').innerHTML = person.fname + " " + person.lname +
 </script>
 
 <br>
+<hr>
+
 <h2>JavaScript Object Methods</h2>
 
 <h4 class="example">Example</h4>
@@ -245,7 +247,6 @@ document.getElementById('demo9').innerHTML = imac.fullSpecs();
 </script>
 
 <br>
-
 <h3>Using Built-In Methods</h3>
 <p>This example uses the <span class="spl">toUpperCase()</span> method of the String object, to convert a text to uppercase:</p>
 
@@ -282,6 +283,31 @@ document.getElementById('demo11').innerHTML = "Customer Details " + customer.det
 
 </script>
 
+<hr>
+<h2>JavaScript Object Constructors</h2>
+
+<h4 class="example">Example</h4>
+
+<p id="demo12"></p>
+<script type="text/javascript">
+
+//Constructor function for Person Object
+function Person(first, last, age, id){
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.id = id;
+}
+
+//Create a person object
+
+var myFather = new Person("John", "Doe", 50, 541);
+
+// Display id
+
+document.getElementById('demo12').innerHTML = "My Father age is " + myFather.age;
+
+</script>
 
 
 </body>
