@@ -237,14 +237,50 @@ var imac = {
   ram : "8 GB",
   storage : "1 TB",
   fullSpecs : function() {
-        return this.operating + " " + this.ram + " " + this.storage;
+  return this.operating + " " + this.ram + " " + this.storage;
   }
 };
-
 
 document.getElementById('demo9').innerHTML = imac.fullSpecs();
 </script>
 
+<br>
+
+<h3>Using Built-In Methods</h3>
+<p>This example uses the <span class="spl">toUpperCase()</span> method of the String object, to convert a text to uppercase:</p>
+
+<h4 class="example">Example</h4>
+<p id="demo10"></p>
+<script type="text/javascript">
+var greetings = "Good Evening!";
+var message = greetings.toUpperCase();
+
+document.getElementById('demo10').innerHTML = message;
+
+
+</script>
+
+
+<h3>Adding a Method to an Object</h3>
+
+<p>Adding a new method to an object is easy</p>
+<h4 class="example">Example</h4>
+<p id="demo11"></p>
+<script type="text/javascript">
+
+var customer = {
+    name : "Raju",
+    fname : "Krisna",
+    id:23
+};
+
+customer.details = function(){
+    return this.name +  " " + this.fname + " " + this.id;
+};
+document.getElementById('demo11').innerHTML = "Customer Details " + customer.details();
+
+
+</script>
 
 
 
