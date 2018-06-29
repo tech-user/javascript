@@ -337,6 +337,65 @@ document.getElementById("demo13").innerHTML =
 "My father is " + myFather.nationality;
 
 </script>
+<br>
+<h3>Adding a Method to a Constructor</h3>
+
+<h4 class="example">Example</h4>
+<p id="demo14"></p>
+
+<script type="text/javascript">
+// Constructor function for Person objects
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    this.name = function() {
+        return this.firstName + " " + this.lastName + " " + this.age
+    };
+}
+
+// Create a Person object
+var myFather = new Person("John", "Doe", 50, "blue");
+
+// Display full name
+document.getElementById("demo14").innerHTML =
+"My father is " + myFather.name();
+
+</script>
+
+<br>
+<h3>Built-in JavaScript Constructors</h3>
+<p>JavaScript has built-in constructors for native objects:</p>
+<h4 class="example">Example</h4>
+
+<p id="demo15"></p>
+
+<script>
+var x1 = new Object();   // A new Object object
+var x2 = new String();   // A new String object
+var x3 = new Number();   // A new Number object
+var x4 = new Boolean();  // A new Boolean object
+var x5 = new Array();    // A new Array object
+var x6 = new RegExp();   // A new RegExp object
+var x7 = new Function(); // A new Function object
+var x8 = new Date();     // A new Date object
+
+// Display the type of all objects
+document.getElementById("demo15").innerHTML =
+"x1: " + typeof x1 + "<br>" +
+"x2: " + typeof x2 + "<br>" +
+"x3: " + typeof x3 + "<br>" +
+"x4: " + typeof x4 + "<br>" +
+"x5: " + typeof x5 + "<br>" +
+"x6: " + typeof x6 + "<br>" +
+"x7: " + typeof x7 + "<br>" +
+"x8: " + typeof x8 + "<br>";
+</script>
+
+<p class="spl">Note : The Math() object is not in the list. Math is a global object. The new keyword cannot be used on Math.</p>
+
+
 
 </body>
 </html>
