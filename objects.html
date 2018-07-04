@@ -66,7 +66,7 @@ document.getElementById('demo3').innerHTML =
 
 </script>
 
-<br>s
+<br>
 
 <h3>Object Methods</h3>
 <li style="color:#a93f55;">Methods are actions that can be performed on objects.</li>
@@ -393,7 +393,70 @@ document.getElementById("demo15").innerHTML =
 "x8: " + typeof x8 + "<br>";
 </script>
 
-<p class="spl">Note : The Math() object is not in the list. Math is a global object. The new keyword cannot be used on Math.</p>
+<p class="spl">Note : The <i>Math()</i> object is not in the list. Math is a global object. The new keyword cannot be used on Math.</p>
+
+<br>
+
+<h3>Object Prototypes</h3>
+<p>All JavaScript objects inherit properties and methods from a prototype.</p>
+
+<p>To add a new property to a constructor, you must add it to the constructor function:</p>
+
+<h4 class="example">Example</h4>
+<p id="demo16"></p>
+
+<script>
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+    this.nationality = "English";
+}
+
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+document.getElementById("demo16").innerHTML =
+"My father is " + myFather.nationality + ". My mother is " + myMother.nationality;
+</script>
+
+
+<h3>Prototype Inheritance</h3>
+
+<p>All JavaScript objects inherit properties and methods from a prototype.
+
+<br>
+  Date objects inherit from Date.prototype. Array objects inherit from Array.prototype. Person objects inherit from Person.prototype.
+
+<br>
+The Object.prototype is on the top of the prototype inheritance chain:
+
+<br>
+Date objects, Array objects, and Person objects inherit from Object.prototype.
+</p>
+
+
+<h3>Using the <i>prototype</i> Property</h3>
+<p>The JavaScript prototype property allows you to add new properties to object constructors:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo17"></p>
+
+<script type="text/javascript">
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+Person.prototype.nationality = "Spanish";
+
+var myFather = new Person("John", "Doe", 50, "Blue");
+document.getElementById('demo17').innerHTML = "My Father is " + myFather.nationality;
+
+</script>
 
 
 
