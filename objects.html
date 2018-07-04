@@ -458,6 +458,29 @@ document.getElementById('demo17').innerHTML = "My Father is " + myFather.nationa
 
 </script>
 
+<p class="spl">The JavaScript prototype property also allows you to add new methods to objects constructors:</p>
+
+
+<h4 class="example">Example</h4>
+
+<p id="demo18"></p>
+<script type="text/javascript">
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+Person.prototype.name = function() {
+    return this.firstName + " " + this.lastName
+};
+
+var myFather = new Person("John", "Doe", 50, "blue");
+
+document.getElementById("demo18").innerHTML =
+"My father is " + myFather.name();
+</script>
+
 
 
 </body>
