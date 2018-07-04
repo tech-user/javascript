@@ -103,11 +103,38 @@ document.getElementById('f4demo').innerHTML = "The Temperature is " + toCelsius(
 <p id="demo1"></p>
 <script type="text/javascript">
 var x = function (a, b) {
-  return a * b
+  return a + b
 };
 
-document.getElementById('demo1').innerHTML = x;
+document.getElementById('demo1').innerHTML = x(2, 8);
 </script>
+<p class="spl">Note : After a function expression has been stored in a variable, the variable can be used as a function:</p>
+
+
+<br>
+
+<h3>The Function() Constructor</h3>
+<p>Functions can also be defined with a built-in JavaScript function constructor called <span class="spl">Function()</span>.</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo2"></p>
+
+<script type="text/javascript">
+var myFunction = new Function("a", "b", "return a%b");
+document.getElementById('demo2').innerHTML = myFunction(4, 5);
+
+</script>
+
+
+
+
+
+
+
+
+
+
 
 
 </body>
