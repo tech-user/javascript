@@ -121,18 +121,39 @@ document.getElementById('demo1').innerHTML = x(2, 8);
 <p id="demo2"></p>
 
 <script type="text/javascript">
-var myFunction = new Function("a", "b", "return a%b");
+var myFunction = new Function("a", "b", "return a*b");
 document.getElementById('demo2').innerHTML = myFunction(4, 5);
 
 </script>
 
+<p class="spl">Note : Most of the time, you can avoid using the new keyword in JavaScript.
+</p>
 
 
+<br>
+<h3>Function Hoisting</h3>
+<p>Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope.</p>
 
+<p>Hoisting applies to variable declarations and to function declarations. Because of this, JavaScript functions can be called before they are declared:</p>
 
+<br>
+<h3>Self-Invoking Functions</h3>
+<p>Function expressions can be made "self-invoking".</p>
+<p>A self-invoking expression is invoked (started) automatically, without being called.</p>
+<p>Function expressions will execute automatically if the expression is followed by <span class="spl">()</span>.
+</p>
 
+<p>You cannot self-invoke a function declaration.</p>
+<h4 class="example">Example</h4>
 
+<p id="demo3"></p>
+<script type="text/javascript">
+(function (){
+  document.getElementById('demo3').innerHTML = "Hello, i called myself";
 
+})();
+
+</script>
 
 
 
