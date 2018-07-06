@@ -155,6 +155,100 @@ document.getElementById('demo2').innerHTML = myFunction(4, 5);
 
 </script>
 
+<h3>Functions Can Be Used as Values</h3>
+<h4 class="example">Example</h4>
+<p>JavaScript functions can be used as values:</p>
+<p id="demo4"></p>
+
+<script type="text/javascript">
+function myFunction2(a, b) {
+return a*b;
+}
+var x = myFunction2(10, 2);
+document.getElementById('demo4').innerHTML = x;
+
+</script>
+
+<br>
+<p class="spl">Functions can be used in expressions.</p>
+<h4 class="example">Example</h4>
+
+<p id="demo5"></p>
+
+<script type="text/javascript">
+function myFunction3(a, b) {
+  return a + b;
+}
+  var x = myFunction3(2, 5) * 9;
+
+  document.getElementById('demo5').innerHTML = x;
+</script>
+
+<br>
+<h3>Functions are Objects</h3>
+
+<p>The typeof operator in JavaScript returns "function" for functions.</p>
+<p>But, JavaScript functions can best be described as objects.</p>
+<p>JavaScript functions have both properties and methods.</p>
+
+<h4 class="example">Example</h4>
+<p id="demo6"></p>
+<script type="text/javascript">
+function myFunction4(a, b) {
+   return arguments.length;
+}
+
+document.getElementById('demo6').innerHTML = myFunction4(2, 3);
+
+</script>
+
+<p>The <span class="spl">toString()</span> method returns the function as a string:</p>
+
+<h4 class="example">Example</h4>
+<p id="demo7"></p>
+<script type="text/javascript">
+function myFunction5(a, b){
+  return a * b;
+}
+
+document.getElementById('demo7').innerHTML = myFunction5.toString();
+</script>
+
+<hr>
+<h2>Function Parameters</h2>
+<p>A JavaScript function does not perform any checking on parameter values (arguments).</p>
+
+<h3>Function Parameters and Arguments</h3>
+<p><img src="assets/function_parameters.png" width="600" height="80"alt=""></p>
+
+<p>Function <span class="spl">parameters</span> are the <span class="spl">names</span> listed in the function definition.</p>
+<p>Function <span class="spl">arguments</span> are the real <span class="spl">values</span> passed to (and received by) the function.</p>
+
+<br><br>
+
+<h3>Parameter Rules</h3>
+
+<p>JavaScript function definitions do not specify data types for parameters.</p>
+<p>JavaScript functions do not perform type checking on the passed arguments.</p>
+<p>JavaScript functions do not check the number of arguments received.</p>
+
+<h3>Parameter Defaults</h3>
+
+<p>If a function is called with <span class="spl">missing arguments</span> (less than declared), the missing values are set to: <span class="spl">undefined</span></p>
+
+<h4 class="example">Example</h4>
+<p id="demo8"></p>
+<script type="text/javascript">
+  function myFunction6(x, y){
+  if (y === undefined) {
+    y = 0;
+
+    }
+    return x * y;
+  }
+
+  document.getElementById('demo8').innerHTML = myFunction6(5);
+</script>
 
 
 
