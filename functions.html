@@ -424,7 +424,7 @@ document.getElementById('demo14').innerHTML = x;
 
 <script type="text/javascript">
 var person = {
-    fullName: function(city, country) {
+    fullName: function(city, country) {//Arguments delcaration
         return this.firstName + " " + this.lastName + "," + city + "," + country;
     }
 }
@@ -439,6 +439,76 @@ var person2 = {
 var x = person.fullName.call(person1, "Oslo", "Norway");
 document.getElementById("demo15").innerHTML = x;
 </script>
+<br>
+
+<hr>
+<h2>JavaScript Function Apply</h2>
+<h3 class="data">Method Reuse</h3>
+<p>With the <span class="spl">apply()</span> method, you can write a method that can be used on different objects.</p>
+
+
+<br>
+
+<h3>The JavaScript apply() Method</h3>
+<p>The <span class="spl">apply()</span> method is similar to the <span class="spl">call()</span> method.</p>
+
+<h4 class="example">Example</h4>
+<p id="demo16"></p>
+<script type="text/javascript">
+var person = {
+fullName:function(){
+  return this.firstName + " " + this.lastName;
+  }
+}
+
+var person1 = {
+  firstName : "Yashwin",
+  lastName : "Raja",
+}
+
+var x = person.fullName.apply(person1);
+document.getElementById('demo16').innerHTML = x;
+
+</script>
+<br>
+
+<h3>The Difference Between call() and apply()</h3>
+<li>The call() method takes arguments <span class="spl">separately</span>.</li>
+<li>The apply() method takes arguments as an <span class="spl">array</span>.</li>
+
+<br>
+
+<div class="notes">
+  The apply() method is very handy if you want to use an array instead of an argument list.
+</div>
+
+<h3>The apply() Method with Arguments</h3>
+<p>The <span class="spl">apply()</span> method accepts arguments in an array:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo17"></p>
+
+<script type="text/javascript">
+var person = {
+  fullName : function(city, country){
+    return this.firstName + " " + this.lastName + ", " + city + ", " + country;
+  }
+}
+var person1 = {
+  firstName : "Kisore",
+  lastName : "Nanda",
+}
+
+var x = person.fullName.apply(person1, ["Hyderabad", "India"]);
+
+document.getElementById('demo17').innerHTML = x;
+
+
+</script>
+
+
+
 
 
 </body>
