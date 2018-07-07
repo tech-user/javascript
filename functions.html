@@ -507,6 +507,118 @@ document.getElementById('demo17').innerHTML = x;
 
 </script>
 
+<br>
+<hr>
+<h2>JavaScript Closures</h2>
+<p>JavaScript variables can belong to the <span class="spl">local</span> or <span class="spl">global</span> scope.</p>
+<p>Global variables can be made local (private) with <span class="spl">closures</span>.</p>
+
+<h3>Global Variables</h3>
+
+<p>A function can access all variables defined inside the function, like this:</p>
+<h4 class="example">Example</h4>
+
+<button type="button" onclick="myFunction9()">Click!</button>
+
+<p id="demo18"></p>
+<script type="text/javascript">
+function myFunction9() {
+  var a = 457;
+  document.getElementById('demo18').innerHTML = a*a;
+}
+
+</script>
+
+<br>
+
+<p>But a function can also access variables defined <span class="spl">outside</span> the function, like this:</p>
+
+<h4 class="example">Example</h4>
+
+<button type="button" onclick="myFunction10()">Click Me!</button>
+
+<p id="demo19"></p>
+
+<script>
+var a = 8;
+function myFunction10() {
+    document.getElementById("demo19").innerHTML = a * a;
+}
+</script>
+
+<div class="notes">Variables created without the keyword var, are always global, even if they are created inside a function.</div>
+
+<br>
+
+<h3>A Counter Dilemma</h3>
+<p>Suppose you want to use a variable for counting something, and you want this counter to be available to all functions.</p>
+<p>You could use a global variable, and a function to increase the counter:</p>
+
+<h4 class="example">Example</h4>
+<p id="demo20"></p>
+
+<script type="text/javascript">
+var counter = 0;
+
+function add(){
+  counter += 1;
+}
+
+add();
+add();
+add();
+add();
+add();
+
+document.getElementById('demo20').innerHTML = counter;
+
+
+</script>
+
+<br>
+
+<h3>JavaScript Nested Functions</h3>
+<h4 class="example">Example</h4>
+
+<p id="demo21"></p>
+<script type="text/javascript">
+  function add() {
+    var counter = 0;
+    function plus(){
+      counter += 1;
+    }
+    plus();
+    return counter;
+  }
+
+  document.getElementById('demo21').innerHTML = add();
+</script>
+
+
+<br>
+<h3>JavaScript Closures</h3>
+<h4 class="example">Example</h4>
+
+<button type="button" onclick="myFunction11()">Count!</button>
+
+<p id="demo22">0</p>
+
+<script>
+var add = (function () {
+    var counter = 0;
+            return function () {
+                counter += 1; return counter;
+            }
+      })();
+
+function myFunction11(){
+    document.getElementById("demo22").innerHTML = add();
+}
+</script>
+
+
+
+
 
 
 
