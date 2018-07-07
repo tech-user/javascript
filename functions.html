@@ -279,6 +279,136 @@ document.getElementById('demo9').innerHTML = findMax(4, 9, 16);
 <hr>
 <h2>JavaScript Function Invocation</h2>
 
+<h3>Invoking a JavaScript Function</h3>
+<p>The code inside a function is not executed when the function is <span class="spl">defined</span>.</p>
+<p>The code inside a function is executed when the function is <span class="spl">invoked</span>.</p>
+<p>It is common to use the term <span class="spl">"call a function"</span> instead of <span class="spl">"invoke a function"</span>.</p>
+<p>It is also common to say "call upon a function", "start a function", or "execute a function".</p>
+<p>In this tutorial, we will use <span class="spl">invoke</span>, because a JavaScript function can be invoked without being called.</p>
+
+<h3>Invoking a Function as a Function</h3>
+
+<h4 class="example">Example</h4>
+
+<p id="demo10"></p>
+
+<script type="text/javascript">
+function myFunction7(x, y){//Function Parameters
+  return x*y;
+}
+document.getElementById('demo10').innerHTML= myFunction7(28, 75); //Calling(invoke) function
+
+</script>
+
+
+<br>
+
+<h3>Invoking a Function as a Method</h3>
+<p>In JavaScript you can define functions as object methods.</p>
+<h4 class="example">Example</h4>
+
+<p id="demo11"></p>
+<script type="text/javascript">
+var myObject = {
+    firstName : "Ganesh",
+    lastName : "Vadla",
+    fullname : function(){
+      return this.firstName + " " + this.lastName;
+    }
+}
+
+document.getElementById('demo11').innerHTML = myObject.fullname();
+
+
+</script>
+<li>The <span class="spl">fullName</span> method is a function. The function belongs to the object. myObject is the owner of the function.</li>
+
+
+<br>
+
+<h3>Invoking a Function with a Function Constructor</h3>
+<p>If a function invocation is preceded with the new keyword, it is a constructor invocation.</p>
+
+<h4 class="example">Example</h4>
+<p id="demo12"></p>
+<script type="text/javascript">
+
+
+//Function Constructor
+function myFunction8(arg1, arg2) {
+  this.firstName = arg1;
+  this.lastName = arg2;
+}
+
+//Creating a new object
+
+var x = new myFunction8("Ganesh", "vadla");
+
+document.getElementById('demo12').innerHTML = x.firstName;
+
+</script>
+
+<br>
+
+<h3>JavaScript Function Call</h3>
+<h4 class="data">Method Reuse</h4>
+<p>With the <span class="spl">call( )</span> method, you can write a method that can be used on different objects. </p>
+
+<br>
+
+<h3>All Functions are Methods</h3>
+<p>In JavaScript all functions are object methods.</p>
+<p>If a function is not a method of a JavaScript object, it is a function of the global object (see previous chapter).</p>
+
+
+<h4 class="example">Example</h4>
+
+<p id="demo13"></p>
+
+<script type="text/javascript">
+ var myObject = {
+    firstName : "Krishna",
+    lastName : "Kumar",
+    fullName : function(){
+          return this.firstName + " " + this.lastName;
+    }
+
+ }
+x = myObject.fullName();
+document.getElementById('demo13').innerHTML = x;
+
+</script>
+
+<h3>The JavaScript call() Method</h3>
+<p>The <span class="spl">call()</span> method is a predefined JavaScript method.</p>
+<p>It can be used to invoke (call) a method with an owner object as an argument (parameter).</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo14"></p>
+
+<script type="text/javascript">
+
+var person = {
+  fullName :function(){
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+var person1 = {
+  firstName : "John",
+  lastName : "Doe",
+}
+var person2 = {
+    firstName:"Mary",
+    lastName: "Doe",
+}
+var x = person.fullName.call(person2);
+document.getElementById('demo14').innerHTML = x;
+
+</script>
+
+
 
 </body>
 </html>

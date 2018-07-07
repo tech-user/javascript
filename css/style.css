@@ -30,6 +30,8 @@ hr{
 
 .data{
  color:#007bb9;
+ text-decoration: underline;
+ font-family: monospace;
 
 }
 
