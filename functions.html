@@ -251,6 +251,34 @@ document.getElementById('demo7').innerHTML = myFunction5.toString();
 </script>
 
 
+<br>
+
+<h3>The Arguments Object</h3>
+
+<p>JavaScript functions have a built-in object called the arguments object.</p>
+<p>The argument object contains an array of the arguments used when the function was called (invoked).</p>
+
+<h4 class="example">Example</h4>
+<p id="demo9"></p>
+<script type="text/javascript">
+function findMax(){
+  var i;
+  var max = -Infinity;
+  for (var i = 0; i < arguments.length; i++) {
+    if (arguments[i] > max) {
+        max = arguments[i];
+    }
+  }
+  return max;
+}
+
+document.getElementById('demo9').innerHTML = findMax(4, 9, 16);
+</script>
+
+
+<hr>
+<h2>JavaScript Function Invocation</h2>
+
 
 </body>
 </html>
