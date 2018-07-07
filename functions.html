@@ -403,11 +403,42 @@ var person2 = {
     firstName:"Mary",
     lastName: "Doe",
 }
-var x = person.fullName.call(person2);
+
+var person3 = {
+  firstName : "Ganesh",
+  lastName : "Vadla",
+}
+
+var x = person.fullName.call(person3);
 document.getElementById('demo14').innerHTML = x;
 
 </script>
 
+<br>
+
+<h3>The call() Method with Arguments</h3>
+<p>The call() method can accept arguments:</p>
+
+<h4 class="example">Example</h4>
+<p id="demo15"></p>
+
+<script type="text/javascript">
+var person = {
+    fullName: function(city, country) {
+        return this.firstName + " " + this.lastName + "," + city + "," + country;
+    }
+}
+var person1 = {
+    firstName:"John",
+    lastName: "Doe",
+}
+var person2 = {
+    firstName:"Mary",
+    lastName: "Doe",
+}
+var x = person.fullName.call(person1, "Oslo", "Norway");
+document.getElementById("demo15").innerHTML = x;
+</script>
 
 
 </body>
