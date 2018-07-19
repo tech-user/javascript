@@ -70,11 +70,13 @@ th {
 }
 
 .notes{
-width: 600px;
+width: 800px;
 height: auto;
 padding: 15px;
 background-color:#ffffcc;
 border-left: 6px solid #ffeb3b;
+text-wrap:normal;
+
 
 }
 
