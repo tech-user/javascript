@@ -38,6 +38,229 @@
     <li>Proper action (like page update) is performed by JavaScript </li>
 </ul>
 
+<h4 class="example">Example</h4>
+
+<div id="demo">
+  <button type="button" >Click</button>
+</div>
+
+
+<script type="text/javascript">
+
+function loadDoc(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        document.getElementById('demo').Introduction = this.responseText;
+    }
+  };
+xhttp.open("GET", "ajax_info.txt", true);
+xhttp.send();
+}
+
+</script>
+
+
+
+<br>
+
+<h2>AJAX - The XMLHttpRequest Object</h2>
+
+<p>The XMLHttpRequest object can be used to exchange data with a web server behind the scenes. This means that it is possible to <span class="spl">update parts of a web page, without reloading the whole page.</span></p>
+
+<br>
+<h3>XMLHttpRequest Object Methods</h3>
+
+<table>
+  <th>Method</th>
+  <th>Description</th>
+  <tr>
+    <td>new XMLHttpRequest()</td>
+    <td>Creates a new XMLHttpRequest object</td>
+  </tr>
+  <tr>
+    <td>abort()</td>
+    <td>Cancels the current request</td>
+  </tr>
+  <tr>
+    <td>getAllResponseHeaders()</td>
+    <td>Returns header information</td>
+  </tr>
+  <tr>
+    <td>getResponseHeader()</td>
+    <td>Returns specific header information</td>
+  </tr>
+  <tr>
+    <td>open(method, url, async, user, psw)</td>
+    <td>Specifies the request<br>
+      method: the request type GET or POST <br>
+      url: the file location <br>
+      async: true (asynchronous) or false (synchronous)<br>
+      user: optional user name <br>
+      psw: optional password
+    </td>
+  </tr>
+  <tr>
+    <td>send()</td>
+    <td>Sends the request to the server
+Used for GET requests</td>
+  </tr>
+<tr>
+  <td>send(string)</td>
+  <td>Sends the request to the server.
+Used for POST requests</td>
+</tr><tr>
+  <td>setRequestHeader()</td>
+  <td>Adds a label/value pair to the header to be sent</td>
+</tr>
+</table>
+
+<br>
+<hr>
+<h2>AJAX - Send a Request To a Server</h2>
+<p>The XMLHttpRequest object is used to exchange data with a server.</p>
+<h3>Send a Request To a Server</h3>
+
+<p>To send a request to a server, we use the <span class="spl">open()</span> and <span class="spl">send()</span> methods of the XMLHttpRequest object:</p>
+
+<h4 class="example">Example</h4>
+
+<p>
+<span class="spl">xttp.open("GET", "ajax_info.txt", true);</span><br>
+<span class="spl">xhttp.send();</span></p>
+
+
+<br>
+<table>
+  <th>Method</th>
+  <th>Description</th>
+
+<tr>
+  <td>open(method, url, async)</td>
+  <td>Specifies the type of request <br><br>
+    method: the type of request: GET or POST<br>
+  url: the server (file) location<br>
+  async: true (asynchronous) or false (synchronous)</td>
+</tr>
+
+<tr>
+  <td>send()</td>
+  <td>Sends the request to the server (used for GET)</td>
+</tr>
+
+<tr>
+  <td>send(string)</td>
+  <td>Sends the request to the server (used for POST)</td>
+</tr>
+
+</table>
+
+<br>
+<h3>GET or POST?</h3>
+
+<p>GET is simpler and faster than POST, and can be used in most cases.</p>
+
+<ul>
+  <li>A cached file is not an option (update a file or database on the server).</li>
+  <li>Sending a large amount of data to the server (POST has no size limitations).</li>
+  <li>Sending user input (which can contain unknown characters), POST is more robust and secure than GET.</li>
+</ul>
+
+<h3>GET Requests</h3>
+
+<h4 class="example">Example</h4>
+<button type="button" onclick="loadDoc2()">Request data</button>
+
+<p id="demo1"></p>
+
+<script type="text/javascript">
+function loadDoc2(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function (){
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById('demo').innerHTML = this.responseText;
+    }
+  };
+
+  xhttp.open("GET", "dom.html", true);
+  xhttp.send();
+}
+
+</script>
+
+<p>In the example above, you may get a cached result. To avoid this, add a unique ID to the URL:</p>
+
+<h4 class="example">Example</h4>
+<button type="button" onclick="loadDoc3()">Request data</button>
+
+<p id="demo2"></p>
+
+<script type="text/javascript">
+function loadDoc3(){
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function (){
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById('demo2').innerHTML = this.responseText;
+    }
+  };
+
+  xhttp.open("GET", "dom.html?t=" + Math.random(), true);
+  xhttp.send();
+}
+
+</script>
+
+<br>
+<h3>POST Requests</h3>
+<button type="button" onclick="loadDoc4()">Request data</button>
+
+<p id="demo3"></p>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function4() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo3").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("POST", "objects.html", true);
+  xhttp.send();
+}
+</script>
+
+<p>To <span class="spl">POST</span> data like an HTML form, add an HTTP header with <span class="spl">setRequestHeader()</span>. Specify the data you want to send in the <span class="spl">send()</span> method:</p>
+
+<h4 class="example">Example</h4>
+
+<button type="button" onclick="loadDoc5()">Data</button>
+
+<p id="demo4"></p>
+
+<script type="text/javascript">
+  function loadDoc5() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function loadDoc5() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById('demo4').innerHTML = this.responseText;
+      }
+    };
+    xhttp.open("POST", "dom.html", true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send("fname=John&lname=Doe");
+  }
+
+</script>
+
+<hr>
+<h2>AJAX - Server Response</h2>
+<h3>The onreadystatechange Property</h3>
+
+
+
+
+
+
 
 </body>
 </html>
