@@ -332,6 +332,141 @@ function myFunction(xhttp) {
   document.getElementById("demo5").innerHTML =
   xhttp.responseText;
 }
+</script>
+
+<br><br><br>
+<div class="notes">The onreadystatechange event is triggered four times (1-4), one time for each change in the readyState.</div>
+
+<br>
+<h3>Using a Callback Function</h3>
+<p>A callback function is a function passed as a parameter to another function.</p>
+
+<p>If you have more than one AJAX task in a website, you should create one function for executing the XMLHttpRequest object, and one callback function for each AJAX task.</p>
+<p>The function call should contain the URL and what function to call when the response is ready.</p>
+
+<h4 class="example">Example</h4>
+
+<div id="demo6"></div>
+
+<button type="button" onclick="loadDoc7('functions.html', myFunction)">Change Content</button>
+
+<script type="text/javascript">
+function loadDoc7(url, cFunction) {
+        var xhttp;
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function(){
+          if (this.readyState == 4 && this.status == 200){
+            cFunction(this);
+          }
+        };
+        xhttp.open("GET", url, true);
+        xhttp.send();
+}
+function myFunction(xhttp){
+  document.getElementById('demo6').innerHTML = xhttp.responseText;
+}
+</script>
+
+<br>
+<br>
+<h3>Server Response Properties</h3>
+
+<table>
+  <th>Property</th>
+  <th>Description</th>
+<tr>
+  <td>responseText</td>
+  <td>get the response data as a string</td>
+</tr>
+
+<tr>
+  <td>responseXML</td>
+  <td>get the response data as XML data</td>
+</tr>
+
+</table>
+
+
+<br>
+
+<h3>Server Response Methods</h3>
+
+<table>
+  <th>Method</th>
+  <th>Description</th>
+<tr>
+  <td>getResponseHeader()</td>
+  <td>Returns specific header information from the server resource</td>
+</tr>
+
+<tr>
+  <td>getAllResponseHeaders()</td>
+  <td>Returns all the header information from the server resource</td>
+</tr>
+
+</table>
+
+<br>
+
+<h3>The responseXML Property</h3>
+<p>The XML HttpRequest object has an in-built XML parser.</p>
+<p>The <span class="spl">responseXML</span> property returns the server response as an XML DOM object.
+</p>
+<p>Using this property you can parse the response as an XML DOM object:</p>
+
+<h4 class="example">Example</h4>
+
+<p id="demo7"></p>
+
+<script>
+var xhttp, xmlDoc, txt, x, i;
+xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+  xmlDoc = this.responseXML;
+  txt = "";
+  x = xmlDoc.getElementsByTagName("ARTIST");
+  for (i = 0; i < x.length; i++) {
+    txt = txt + x[i].childNodes[0].nodeValue + "<br>";
+  }
+  document.getElementById("demo7").innerHTML = txt;
+  }
+};
+xhttp.open("GET", "cd_catalog.xml", true);
+xhttp.send();
+</script>
+
+<br>
+<hr>
+<h2>AJAX PHP</h2>
+
+<h4 class="example">Example</h4>
+<form action="">
+  First name : <input type="text" id="txt1" onkeyup="showHint(this.value)">
+
+  <p>Suggestions : <span id="txtHint"></span></p>
+<script type="text/javascript">
+function showHint(str){
+  var xhttp;
+  if (str.length == 0) {
+    document.getElementById('txtHint').innerHTML = "";
+    return;
+  }
+  xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function(){
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+  };
+  xttp.open("GET", "gethint.php?q="+str, true);
+  xhttp.send();
+}
+
+</script>
+
+
+</form>
+
 
 </body>
 </html>
